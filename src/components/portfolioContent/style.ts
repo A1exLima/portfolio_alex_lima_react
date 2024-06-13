@@ -4,7 +4,7 @@ interface FiltersProps {
   $color: string
 }
 
-export const RepositoryContainer = styled.section`
+export const PortfolioContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 3rem;

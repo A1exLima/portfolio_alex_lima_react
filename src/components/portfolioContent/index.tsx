@@ -1,29 +1,27 @@
 import {
-  RepositoryContainer,
   FilterProjects,
   Filters,
   ProjectNotFound,
   FilterContainer,
   FilterButton,
+  PortfolioContainer,
 } from './style'
-
-import { v4 as uuidv4 } from 'uuid' // Importa a função v4 renomeada como uuidv4
 
 import { useState, useEffect } from 'react'
 
-import { technologyIcons } from '../../../../registrationProjectsAndTechnologies/technologyIcons'
+import { technologyIcons } from '../../registrationProjectsAndTechnologies/technologyIcons'
 import {
   projectRegistration,
   projectRegistrationProps,
-} from '../../../../registrationProjectsAndTechnologies/projectRegistration'
+} from '../../registrationProjectsAndTechnologies/projectRegistration'
 
-import { Projects } from './components/project'
+import { ProjectGrid } from '../projectGrid'
 
 import { TbNotesOff } from 'react-icons/tb'
 import { MdFilterList } from 'react-icons/md'
 import { IoClose } from 'react-icons/io5'
 
-export function Repository() {
+export function PortfolioContent() {
   const [technologyFilterOptions, setTechnologyFilterOptions] = useState<
     string[]
   >([])
@@ -76,7 +74,7 @@ export function Repository() {
   }
 
   return (
-    <RepositoryContainer>
+    <PortfolioContainer>
       <h2>
         Projetos <span>.</span>
       </h2>
@@ -89,7 +87,7 @@ export function Repository() {
         <FilterProjects className={`${filterVisible ? 'open' : 'close'}`}>
           {technologyFilterOptions.map((technology) => (
             <Filters
-              key={uuidv4()}
+              key={technology}
               title={`Filtrar por ${technology}`}
               $color={buttonsClicked.includes(technology) ? 'blue' : ''}
               onClick={() => handleTechnologiesFilter(technology)}
@@ -101,13 +99,13 @@ export function Repository() {
       </FilterContainer>
 
       {filteredProjects.length ? (
-        <Projects projectsArray={filteredProjects} />
+        <ProjectGrid projectsArray={filteredProjects} />
       ) : (
         <ProjectNotFound>
           <TbNotesOff />
           <span>Projeto não encontrado</span>
         </ProjectNotFound>
       )}
-    </RepositoryContainer>
+    </PortfolioContainer>
   )
 }

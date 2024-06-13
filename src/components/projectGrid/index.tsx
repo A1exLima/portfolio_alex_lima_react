@@ -1,9 +1,9 @@
-import { Project, ProjectsContainer } from './style'
+import { Project, ProjectGridContainer } from './style'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { projectRegistrationProps } from '../../../../../../registrationProjectsAndTechnologies/projectRegistration'
-import { technologyIcons } from '../../../../../../registrationProjectsAndTechnologies/technologyIcons'
+import { projectRegistrationProps } from '../../registrationProjectsAndTechnologies/projectRegistration'
+import { technologyIcons } from '../../registrationProjectsAndTechnologies/technologyIcons'
 
 import { IoMdImages } from 'react-icons/io'
 import { PiKeyReturnFill } from 'react-icons/pi'
@@ -13,7 +13,7 @@ interface ProjectsProps {
   projectsArray: projectRegistrationProps[]
 }
 
-export function Projects({ projectsArray }: ProjectsProps) {
+export function ProjectGrid({ projectsArray }: ProjectsProps) {
   const [rotatedProjectId, setRotatedProjectId] = useState<number | string>('')
 
   const renderTechnologyIcon = (technology: string): JSX.Element => {
@@ -27,7 +27,7 @@ export function Projects({ projectsArray }: ProjectsProps) {
   }
 
   return (
-    <ProjectsContainer>
+    <ProjectGridContainer>
       {projectsArray.map((project) => (
         <Project
           key={project.id}
@@ -91,6 +91,6 @@ export function Projects({ projectsArray }: ProjectsProps) {
           </div>
         </Project>
       ))}
-    </ProjectsContainer>
+    </ProjectGridContainer>
   )
 }

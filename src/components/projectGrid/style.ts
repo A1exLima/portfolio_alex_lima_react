@@ -13,7 +13,8 @@ interface ProjectProps {
   $background: string
 }
 
-export const ProjectsContainer = styled.div`
+export const ProjectGridContainer = styled.div`
+  border: 2px solid red;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;

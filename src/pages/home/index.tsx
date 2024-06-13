@@ -1,8 +1,8 @@
 import { Container, MainContainer } from './style'
 
-import { Banner } from './components/banner'
-import { About } from './components/about'
-import { Repository } from './components/repository'
+import { Banner } from '../../components/banner'
+import { About } from '../../components/about'
+import { PortfolioContent } from '../../components/portfolioContent'
 
 export function Home() {
   return (
@@ -10,7 +10,7 @@ export function Home() {
       <Container>
         <Banner />
         <About />
-        <Repository />
+        <PortfolioContent />
       </Container>
     </MainContainer>
   )

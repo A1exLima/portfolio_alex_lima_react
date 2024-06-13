@@ -1,8 +1,8 @@
 import { BannerContainer } from './style'
 
-import { TypingAnimation } from './TypingAnimation'
+import { TypingAnimation } from '../TypingAnimation'
 
-import codeBanner from '../../../../assets/icons/codeBanner.svg'
+import codeBanner from '../../assets/icons/codeBanner.svg'
 import { MdWhatsapp } from 'react-icons/md'
 
 export function Banner() {

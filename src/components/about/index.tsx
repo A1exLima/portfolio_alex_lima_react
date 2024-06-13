@@ -7,7 +7,7 @@ import { CiLinkedin } from 'react-icons/ci'
 import { PiYoutubeLogo } from 'react-icons/pi'
 import { FaGithub } from 'react-icons/fa'
 
-import alexLima from '../../../../assets/images/about/alexLima.png'
+import alexLima from '../../assets/images/about/alexLima.png'
 
 export function About() {
   return (

@@ -1,4 +1,4 @@
-import { BASE_COLORS } from '../pages/home/components/repository/components/project/style'
+import { BASE_COLORS } from '../components/projectGrid/style'
 
 export interface projectRegistrationProps {
   id: number
