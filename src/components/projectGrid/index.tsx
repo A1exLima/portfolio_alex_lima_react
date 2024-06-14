@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 import {
   ProjectGridContainer,
   NavigationButton,
@@ -16,6 +16,10 @@ interface ProjectsProps {
 export function ProjectGrid({ projectsArray }: ProjectsProps) {
   const [currentPage, setCurrentPage] = useState(0)
   const [projectsPerPage, setProjectsPerPage] = useState(4)
+
+  useLayoutEffect(() => {
+    setCurrentPage(0)
+  }, [projectsArray])
 
   useEffect(() => {
     const updateProjectsPerPage = () => {
