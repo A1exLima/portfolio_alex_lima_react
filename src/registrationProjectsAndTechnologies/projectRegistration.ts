@@ -1,4 +1,10 @@
-import { BASE_COLORS } from '../components/projectGrid/style'
+export const BASE_COLORS = {
+  red: 'project-red',
+  blue: 'project-blue',
+  violet: 'project-violet',
+  purple: 'project-purple',
+  green: 'project-green',
+} as const
 
 export interface projectRegistrationProps {
   id: number
