@@ -33,8 +33,7 @@ export function PortfolioContent() {
   >([])
   const [buttonsClicked, setButtonsClicked] = useState<string[]>([])
 
-  const [filterButtonAppears, setFilterButtonAppears] = useState<boolean>(false)
-  const [filterVisible, setFilterVisible] = useState<boolean>(false)
+  const [filterVisible, setFilterVisible] = useState<boolean | string>('')
 
   useEffect(() => {
     setTechnologyFilterOptions(Object.keys(technologyIcons))
@@ -70,7 +69,6 @@ export function PortfolioContent() {
 
   const handleFilterButton = () => {
     setFilterVisible((prevState) => !prevState)
-    setFilterButtonAppears((prevState) => !prevState)
   }
 
   return (
@@ -81,7 +79,7 @@ export function PortfolioContent() {
 
       <FilterContainer>
         <FilterButton onClick={handleFilterButton}>
-          {filterButtonAppears ? <IoClose /> : <MdFilterList />}
+          {filterVisible ? <IoClose /> : <MdFilterList />}
         </FilterButton>
 
         <FilterProjects className={`${filterVisible ? 'open' : 'close'}`}>

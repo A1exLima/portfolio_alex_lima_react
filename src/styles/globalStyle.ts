@@ -11,6 +11,9 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     font-size: 62.5%;
     --font-Archivo: "Archivo", sans-serif;
+    --swiper-pagination-color: ${(props) => props.theme['blue-object']};
+    --swiper-theme-color: ${(props) => props.theme['blue-object']};
+    --swiper-pagination-bullet-inactive-color: ${(props) => props.theme.textInSmallCase};
 
     @media (max-width: 768px) {
           font-size: 52.5%;

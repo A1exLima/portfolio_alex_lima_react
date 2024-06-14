@@ -10,11 +10,11 @@ interface CardContainerProps {
 export const CardContainer = styled.div<CardContainerProps>`
   min-height: 30rem;
   background-color: ${(props) => props.theme['child-container']};
-  border: 0.1rem solid ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
 
   .front,
   .back {
+    border: 1px solid ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
     position: absolute;
     width: 100%;
     height: 100%;

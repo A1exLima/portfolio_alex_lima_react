@@ -7,16 +7,12 @@ interface FiltersProps {
 export const PortfolioContainer = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.5rem;
   width: 100%;
   border: 2px solid ${(props) => props.theme['border-theme']};
   border-radius: 8px;
   padding: 4rem;
   background-color: ${(props) => props.theme['container-theme']};
-
-  @media (max-width: 525px) {
-    gap: 1.7rem;
-  }
 
   > h2 {
     margin-left: 2rem;
@@ -26,6 +22,10 @@ export const PortfolioContainer = styled.section`
     color: ${(props) => props.theme.textInUpperCase};
     letter-spacing: 0.1rem;
     text-align: center;
+
+    @media (max-width: 525px) {
+      margin-bottom: 1.5rem;
+    }
 
     > span {
       color: ${(props) => props.theme['blue-text']};
@@ -73,7 +73,6 @@ export const FilterButton = styled.button`
 export const FilterProjects = styled.div`
   display: none;
   transform-origin: left;
-
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
@@ -95,7 +94,6 @@ export const FilterProjects = styled.div`
   }
 
   &.close {
-    display: flex;
     animation: hide 0.6s forwards;
   }
 
@@ -113,6 +111,7 @@ export const FilterProjects = styled.div`
 
   @keyframes hide {
     0% {
+      display: flex;
       opacity: 1;
       transform: scaleX(1);
     }
@@ -148,12 +147,12 @@ export const Filters = styled.span<FiltersProps>`
 
 export const ProjectNotFound = styled.div`
   width: 100%;
+  min-height: 61rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 10rem 0 15rem 0;
 
   > svg {
     font-size: 10rem;
