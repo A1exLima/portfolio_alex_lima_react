@@ -27,7 +27,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://fedelivery.netlify.app/',
     linkGitHub: 'https://github.com/A1exLima/food_explorer_front_end',
     technologies: ['html'],
-    color: 'blue',
+    color: 'red',
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://keyrover.netlify.app/',
     linkGitHub: 'https://github.com/A1exLima/freelancer-key-rover',
     technologies: ['html', 'css'],
-    color: 'red',
+    color: 'blue',
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://keyrover.netlify.app/',
     linkGitHub: 'https://github.com/A1exLima/freelancer-key-rover',
     technologies: ['javaScript'],
-    color: 'red',
+    color: 'violet',
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://fedelivery.netlify.app/',
     linkGitHub: 'https://github.com/A1exLima/food_explorer_front_end',
     technologies: ['html'],
-    color: 'blue',
+    color: 'green',
   },
   {
     id: 5,
@@ -71,7 +71,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://keyrover.netlify.app/',
     linkGitHub: 'https://github.com/A1exLima/freelancer-key-rover',
     technologies: ['html', 'css'],
-    color: 'red',
+    color: 'purple',
   },
   {
     id: 6,
@@ -93,7 +93,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://fedelivery.netlify.app/',
     linkGitHub: 'https://github.com/A1exLima/food_explorer_front_end',
     technologies: ['html'],
-    color: 'blue',
+    color: 'green',
   },
   {
     id: 8,
@@ -104,7 +104,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://keyrover.netlify.app/',
     linkGitHub: 'https://github.com/A1exLima/freelancer-key-rover',
     technologies: ['html', 'css'],
-    color: 'red',
+    color: 'violet',
   },
   {
     id: 9,
@@ -115,7 +115,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://keyrover.netlify.app/',
     linkGitHub: 'https://github.com/A1exLima/freelancer-key-rover',
     technologies: ['html', 'css'],
-    color: 'red',
+    color: 'purple',
   },
   {
     id: 10,

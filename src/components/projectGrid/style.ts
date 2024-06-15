@@ -61,6 +61,6 @@ export const NavigationButton = styled.button`
 
   &:disabled {
     background-color: ${(props) => props.theme['project-gray']};
-    cursor: not-allowed;
+    cursor: default;
   }
 `

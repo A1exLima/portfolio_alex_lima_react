@@ -23,11 +23,11 @@ export function About() {
           <h4>Front-End Developer</h4>
 
           <p>
-            Desenvolvedor web front-end, especializado na criação e manutenção
+            Desenvolvedor web Front-End, especializado na criação e manutenção
             de interfaces web centradas na experiência do usuário. Sólido
             domínio das tecnologias essenciais, incluindo HTML, CSS, JavaScript,
-            React e Node.js, além de familiaridade com SQLite, Knex, Git e
-            integrações API.
+            integrações Api RestFul e React, além de familiaridade com Node.js,
+            SQLite e Knex.
           </p>
         </div>
 

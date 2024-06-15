@@ -14,6 +14,7 @@ export const CardContainer = styled.div<CardContainerProps>`
 
   .front,
   .back {
+    border-radius: 5px;
     border: 1px solid ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
     position: absolute;
     width: 100%;

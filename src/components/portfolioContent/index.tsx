@@ -78,7 +78,10 @@ export function PortfolioContent() {
       </h2>
 
       <FilterContainer>
-        <FilterButton onClick={handleFilterButton}>
+        <FilterButton
+          onClick={handleFilterButton}
+          title="Filtrar por tecnologia"
+        >
           {filterVisible ? <IoClose /> : <MdFilterList />}
         </FilterButton>
 
@@ -86,7 +89,7 @@ export function PortfolioContent() {
           {technologyFilterOptions.map((technology) => (
             <Filters
               key={technology}
-              title={`Filtrar por ${technology}`}
+              title={`${technology}`}
               $color={buttonsClicked.includes(technology) ? 'blue' : ''}
               onClick={() => handleTechnologiesFilter(technology)}
             >

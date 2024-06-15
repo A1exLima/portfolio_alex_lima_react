@@ -3,23 +3,31 @@ import styled from 'styled-components'
 export const AboutContainer = styled.section`
   width: 100%;
   height: 58.5rem;
-  border: 2px solid ${(props) => props.theme['border-theme']};
-  border-radius: 8px;
-  padding: 4rem;
-  background-color: ${(props) => props.theme['container-theme']};
 
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
+
+  border: 2px solid ${(props) => props.theme['border-theme']};
+  border-radius: 8px;
+  padding: 4rem;
+
+  background-color: ${(props) => props.theme['container-theme']};
 
   > figure {
     min-width: 51.2rem;
-    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     > img {
-      width: 100%;
+      margin-left: 1rem;
+      width: 95%;
       height: 100%;
       object-fit: contain;
+      filter: drop-shadow(
+        1px 2px 5px ${(props) => props.theme['child-border']}
+      );
     }
 
     animation: oscillation 6s ease-in-out infinite;
@@ -27,10 +35,10 @@ export const AboutContainer = styled.section`
     @keyframes oscillation {
       0%,
       100% {
-        filter: brightness(110%);
+        filter: brightness(105%);
       }
       50% {
-        filter: brightness(125%);
+        filter: brightness(120%);
       }
     }
   }
@@ -79,10 +87,11 @@ export const AboutContainer = styled.section`
     }
 
     > div:nth-child(2) {
-      padding-top: 3rem;
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
+      padding-top: 2rem;
     }
   }
 
@@ -94,12 +103,50 @@ export const AboutContainer = styled.section`
       width: 100%;
       height: 45rem;
     }
+
+    > div {
+      > div:nth-child(1) {
+        > h2 {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    > div {
+      > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > h2 {
+          padding-bottom: 0.8rem;
+        }
+
+        > p {
+          text-align: center;
+        }
+      }
+
+      > div:nth-child(2) {
+        justify-content: center;
+      }
+    }
   }
 
   @media (max-width: 540px) {
     > figure {
       min-width: 100%;
       height: 100%;
+    }
+  }
+
+  @media (max-width: 395px) {
+    > div {
+      > div:nth-child(2) {
+        gap: 1rem;
+      }
     }
   }
 `
