@@ -2,13 +2,17 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const HeaderContainer = styled.header`
-  height: 13rem;
-  padding: 4rem 0;
+  height: fit-content;
+  padding: 4rem 0 10rem 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
 `
 
 export const Brand = styled(Link)`
