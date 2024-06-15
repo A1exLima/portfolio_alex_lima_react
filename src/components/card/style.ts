@@ -190,7 +190,7 @@ export const CardContainer = styled.div<CardContainerProps>`
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
-        border-radius: 2px;
+        border-radius: 5px;
         box-shadow: ${({ theme }) => `${theme.textInSmallCase}20`} 0px 0px 20px
           1px;
 

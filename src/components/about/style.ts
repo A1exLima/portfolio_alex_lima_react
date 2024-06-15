@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const AboutContainer = styled.section`
   width: 100%;
-  height: 58.5rem;
+  height: 65rem;
 
   display: flex;
   align-items: center;
@@ -35,16 +35,16 @@ export const AboutContainer = styled.section`
     @keyframes oscillation {
       0%,
       100% {
-        filter: brightness(105%);
+        filter: brightness(110%);
       }
       50% {
-        filter: brightness(120%);
+        filter: brightness(125%);
       }
     }
   }
 
   > div {
-    height: 95%;
+    height: 85%;
     display: flex;
     flex-direction: column;
     align-items: start;

@@ -103,8 +103,10 @@ export function PortfolioContent() {
         <ProjectGrid projectsArray={filteredProjects} />
       ) : (
         <ProjectNotFound>
-          <TbNotesOff />
-          <span>Projeto não encontrado</span>
+          <div>
+            <TbNotesOff />
+            <span>Projeto não encontrado</span>
+          </div>
         </ProjectNotFound>
       )}
     </PortfolioContainer>

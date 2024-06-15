@@ -147,30 +147,44 @@ export const Filters = styled.span<FiltersProps>`
 
 export const ProjectNotFound = styled.div`
   width: 100%;
-  min-height: 61rem;
+  min-height: 65rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
 
-  > svg {
-    font-size: 10rem;
-    opacity: 0.6;
-    color: ${(props) => props.theme.textInSmallCase};
+  > div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 
-    animation: rotateNotFound 3s infinite alternate;
+    margin-top: -5rem;
 
-    @keyframes rotateNotFound {
-      to {
-        filter: brightness(120%);
-        transform: rotateY(360deg);
+    > svg {
+      font-size: 10rem;
+      opacity: 0.6;
+      color: ${(props) => props.theme.textInSmallCase};
+
+      animation: rotateNotFound 3s infinite alternate;
+
+      @keyframes rotateNotFound {
+        to {
+          filter: brightness(120%);
+          transform: rotateY(360deg);
+        }
       }
+    }
+
+    > span {
+      font-weight: 500;
+      opacity: 0.6;
     }
   }
 
-  > span {
-    font-weight: 500;
-    opacity: 0.6;
+  @media (max-width: 768px) {
+    min-height: 67.5rem;
   }
 `

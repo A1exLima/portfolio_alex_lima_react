@@ -2,20 +2,23 @@ import styled from 'styled-components'
 
 export const BannerContainer = styled.section`
   width: 100%;
+  min-height: 60rem;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   > div {
-    max-width: 65.6rem;
+    max-width: 64.8rem;
+    margin-top: -5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 4rem;
 
     > h1 {
       font-weight: 500;
-      line-height: 125%;
-      padding-bottom: 4rem;
+      line-height: 130%;
       font-size: 4rem;
       color: ${(props) => props.theme.textInUpperCase};
 
@@ -41,9 +44,10 @@ export const BannerContainer = styled.section`
     }
 
     > p {
-      height: 4.6rem;
+      width: 82%;
+      height: 8rem;
       font-weight: 500;
-      line-height: 125%;
+      line-height: 145%;
       font-size: 1.8rem;
       color: ${(props) => props.theme.textInSmallCase};
 
@@ -60,7 +64,6 @@ export const BannerContainer = styled.section`
 
       width: 33rem;
       height: 6rem;
-      margin-top: 4rem;
       background-color: ${(props) => props.theme['blue-object']};
       border-radius: 0.8rem;
 
@@ -83,8 +86,30 @@ export const BannerContainer = styled.section`
         width: 36rem;
       }
     }
+  }
 
-    @media (max-width: 768px) {
+  > figure {
+    width: 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5rem;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1120px) {
+    > figure {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+
+    > div {
       align-items: center;
 
       > h1 {
@@ -97,38 +122,21 @@ export const BannerContainer = styled.section`
         font-size: clamp(1.6rem, 2vw, 1.8rem);
       }
     }
+  }
 
-    @media (max-width: 545px) {
+  @media (max-width: 412px) {
+    > div {
       > p {
-        height: 6.6rem;
+        height: 9.5rem;
       }
     }
+  }
 
-    @media (max-width: 380px) {
+  @media (max-width: 380px) {
+    > div {
       > p {
         height: 8.6rem;
       }
     }
-  }
-
-  > figure {
-    width: 45rem;
-    height: 43rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    > img {
-      width: 100%;
-    }
-
-    @media (max-width: 1120px) {
-      display: none;
-    }
-  }
-
-  @media (max-width: 768px) {
-    justify-content: center;
-    align-items: start;
   }
 `
