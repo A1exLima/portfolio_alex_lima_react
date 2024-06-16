@@ -3,6 +3,7 @@ import { Container, MainContainer } from './style'
 import { Banner } from '../../components/banner'
 import { About } from '../../components/about'
 import { PortfolioContent } from '../../components/portfolioContent'
+import { Knowledge } from '../../components/knowledge'
 
 export function Home() {
   return (
@@ -11,6 +12,7 @@ export function Home() {
         <Banner />
         <About />
         <PortfolioContent />
+        <Knowledge />
       </Container>
     </MainContainer>
   )

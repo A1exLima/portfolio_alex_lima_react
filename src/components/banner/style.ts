@@ -10,7 +10,7 @@ export const BannerContainer = styled.section`
 
   > div {
     max-width: 64.8rem;
-    margin-top: -5rem;
+    margin-top: -10rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +93,7 @@ export const BannerContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -5rem;
+    margin-top: -10rem;
 
     > img {
       width: 100%;
@@ -111,6 +111,7 @@ export const BannerContainer = styled.section`
 
     > div {
       align-items: center;
+      margin-top: -5rem;
 
       > h1 {
         text-align: center;

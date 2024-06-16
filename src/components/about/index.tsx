@@ -26,7 +26,7 @@ export function About() {
             Desenvolvedor web Front-End, especializado na criação e manutenção
             de interfaces web centradas na experiência do usuário. Sólido
             domínio das tecnologias essenciais, incluindo HTML, CSS, JavaScript,
-            integrações Api RestFul e React, além de familiaridade com Node.js,
+            integrações API RESTful e React, além de familiaridade com Node.js,
             SQLite e Knex.
           </p>
         </div>

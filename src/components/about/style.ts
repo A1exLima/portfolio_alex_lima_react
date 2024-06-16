@@ -159,7 +159,7 @@ export const SocialNetworkContainer = styled.div`
   justify-content: center;
 
   background-color: ${(props) => props.theme['background-theme']};
-  border-radius: 8px;
+  border-radius: 5px;
   border: 2px solid ${(props) => props.theme['border-theme']};
 
   cursor: pointer;

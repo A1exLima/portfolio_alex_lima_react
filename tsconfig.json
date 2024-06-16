@@ -25,6 +25,6 @@
             "./src/types"
         ]
   },
-  "include": ["src"],
+  "include": ["src", "src/registrationProjectsAndTechnologies/knowledgeRegister.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
