@@ -1,6 +1,7 @@
 export const defaultTheme = {
   textInUpperCase: '#F5F5F5',
   textInSmallCase: '#8D8D99',
+  'toolTip-color': '#c7bebe',
   'blue-text': '#4EA8D0',
   'blue-object': '#2A7FB2',
   'project-red': '#E51D37',

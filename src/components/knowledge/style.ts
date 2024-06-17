@@ -31,14 +31,20 @@ export const KnowledgeContainer = styled.section`
 
 export const TechnologyReading = styled.p`
   min-height: 13.5rem;
+  margin-top: -4rem;
   line-height: 150%;
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
   font-weight: 500;
   color: ${(props) => props.theme.textInSmallCase};
 
+  @media (max-width: 790px) {
+    margin-top: 0;
+  }
+
   @media (max-width: 768px) {
     text-align: center;
+    margin-top: 0;
   }
 
   @media (max-width: 525px) {
