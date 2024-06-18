@@ -126,6 +126,7 @@ export const AboutContainer = styled.section`
 
         > p {
           text-align: center;
+          line-height: 140%;
         }
       }
 

@@ -16,6 +16,7 @@ export const HeaderContainer = styled.header`
 `
 
 export const Brand = styled(Link)`
+  border-bottom: 1px solid none;
   width: fit-content;
   display: flex;
   align-items: center;

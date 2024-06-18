@@ -1,8 +1,15 @@
-import { ContactButton, ContactContainer, FormContainer } from './style'
+import {
+  AlertMessage,
+  ContactButton,
+  ContactContainer,
+  FormContainer,
+} from './style'
 
-import { ReactElement } from 'react'
+import { ReactElement, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+
+import emailjs from '@emailjs/browser'
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
@@ -13,7 +20,7 @@ import { styled } from '@mui/material/styles'
 import { FaDownload, FaGithub, FaInstagram } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { CiLinkedin } from 'react-icons/ci'
-import { FaPhone } from 'react-icons/fa6'
+import { FaPhone, FaArrowsRotate } from 'react-icons/fa6'
 import { PiYoutubeLogoLight } from 'react-icons/pi'
 
 import { defaultTheme } from '../../styles/themes/defaultTheme'
@@ -31,7 +38,7 @@ const CustomTooltip = styled(({ className, ...props }: CustomTooltipProps) => (
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: defaultTheme['child-container'],
     color: defaultTheme['toolTip-color'],
-    fontSize: theme.typography.pxToRem(20), // Define o tamanho da fonte
+    fontSize: theme.typography.pxToRem(20),
     fontFamily: 'Archivo',
     border: `2px solid ${defaultTheme['blue-object']}`,
   },
@@ -42,9 +49,15 @@ const CustomTooltip = styled(({ className, ...props }: CustomTooltipProps) => (
 
 const messageFormValidationSchema = zod.object({
   name: zod.string().min(3, 'Digite seu nome'),
-  email: zod.string().email('Digite um E-mail válido'),
+  email: zod.string().email('Digite um e-mail válido'),
   subject: zod.string().min(3, 'Digite o assunto'),
-  message: zod.string().min(3, 'Digite uma mensagem'),
+  message: zod
+    .string()
+    .min(3, 'Digite uma mensagem')
+    .max(
+      400,
+      'Por favor, revise sua mensagem. O limite máximo é de 400 caracteres.',
+    ),
 })
 
 type ObjectMessageFormProps = zod.infer<typeof messageFormValidationSchema>
@@ -60,9 +73,38 @@ export function Contact() {
     },
   })
 
-  const handleCreateMessageForm = (data: ObjectMessageFormProps) => {
-    console.log(data)
-    reset()
+  const [loading, setLoading] = useState<boolean>(false)
+  const [messageAlert, setMessageAlert] = useState<string>('')
+  const [colorMessage, setColorMessage] = useState<boolean>(false)
+
+  const handleCreateMessageForm = async (data: ObjectMessageFormProps) => {
+    setLoading(true)
+
+    const templateParams = {
+      from_name: data.name,
+      message: data.message,
+      subject: data.subject,
+      email: data.email,
+    }
+
+    try {
+      await emailjs.send(
+        'service_df6sjvb',
+        'template_ycfhqgi',
+        templateParams,
+        'Bhs9f21KblasGkFIM',
+      )
+
+      setMessageAlert('Mensagem enviada com sucesso!')
+      setColorMessage(false)
+      setLoading(false)
+
+      reset()
+    } catch (error) {
+      setMessageAlert('Erro ao enviar mensagem')
+      setColorMessage(true)
+      setLoading(false)
+    }
   }
 
   return (
@@ -120,9 +162,24 @@ export function Contact() {
               {...register('message')}
             ></textarea>
 
-            <button type="submit">ENVIAR</button>
+            <button type="submit" title="Enviar Mensagem">
+              {loading ? (
+                <span className="loading-button">
+                  <FaArrowsRotate />
+                </span>
+              ) : (
+                'ENVIAR'
+              )}
+            </button>
           </FormContainer>
         </form>
+        <AlertMessage $color={colorMessage}>
+          {messageAlert ? (
+            <span className="alert-send-message">{messageAlert}</span>
+          ) : (
+            ''
+          )}
+        </AlertMessage>
       </div>
 
       <div>

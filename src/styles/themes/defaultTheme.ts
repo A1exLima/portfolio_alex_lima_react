@@ -18,4 +18,5 @@ export const defaultTheme = {
   'border-gradient':
     'linear-gradient(90deg, rgba(17, 17, 17, 1) 2%, rgba(42, 127, 178, 1) 64%)',
   'text-validation': '#CE2138',
+  'alert-message': '#4C9E3F',
 }

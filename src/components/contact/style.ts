@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface AlertMessageProps {
+  $color: boolean
+}
+
 export const ContactContainer = styled.section`
   width: 100%;
   min-height: 65rem;
@@ -37,7 +41,7 @@ export const ContactContainer = styled.section`
     letter-spacing: 0.1rem;
   }
 
-  > div {
+  > div:nth-child(3) {
     max-width: 60rem;
     margin-top: -2rem;
 
@@ -51,12 +55,18 @@ export const ContactContainer = styled.section`
     }
   }
 
-  > div:last-child {
+  > div:nth-child(4) {
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+
+    > a {
+      &:focus {
+        outline: 0;
+      }
+    }
   }
 
   @media (max-width: 768px) {
@@ -144,6 +154,7 @@ export const FormContainer = styled.div`
   }
 
   > button {
+    cursor: pointer;
     margin-top: 1rem;
     border: none;
     width: 100%;
@@ -151,9 +162,42 @@ export const FormContainer = styled.div`
     background-color: ${(props) => props.theme['blue-object']};
     border-radius: 0.8rem;
 
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: ${(props) => props.theme.textInUpperCase};
+
+    transition: filter 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+      box-shadow: 1px 2px 25px ${(props) => props.theme['child-border']};
+    }
+
+    &:hover {
+      filter: brightness(120%);
+    }
+
+    .loading-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      animation: rotate 0.8s linear infinite;
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      > svg {
+        font-size: 2.4rem;
+        color: ${(props) => props.theme.textInUpperCase};
+      }
+    }
   }
 `
 
@@ -169,6 +213,12 @@ export const ContactButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:focus {
+    outline: 0;
+    border: 2px solid ${(props) => props.theme['blue-object']};
+    border-radius: 8px;
+  }
 
   > svg {
     font-size: 3.1rem;
@@ -189,5 +239,19 @@ export const ContactButton = styled.button`
       font-size: 2.9rem;
       color: ${(props) => props.theme['blue-object']};
     }
+  }
+`
+
+export const AlertMessage = styled.div<AlertMessageProps>`
+  .alert-send-message {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: ${({ theme, $color }) =>
+      $color ? theme['text-validation'] : theme['alert-message']};
   }
 `

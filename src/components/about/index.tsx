@@ -32,25 +32,25 @@ export function About() {
         </div>
 
         <div>
-          <SocialNetworkContainer>
+          <SocialNetworkContainer title="Rede Social Instagram">
             <NavLink target="_blank" to="https://www.instagram.com/a1ex.lima/">
               <IoLogoInstagram />
             </NavLink>
           </SocialNetworkContainer>
 
-          <SocialNetworkContainer>
+          <SocialNetworkContainer title="Rede Social LinkedIn">
             <NavLink target="_blank" to="https://www.linkedin.com/in/a1exlima/">
               <CiLinkedin />
             </NavLink>
           </SocialNetworkContainer>
 
-          <SocialNetworkContainer>
+          <SocialNetworkContainer title="Canal no Youtube">
             <NavLink target="_blank" to="https://www.youtube.com/@A1exLima">
               <PiYoutubeLogo />
             </NavLink>
           </SocialNetworkContainer>
 
-          <SocialNetworkContainer>
+          <SocialNetworkContainer title="Repositório GitHub">
             <NavLink target="_blank" to="https://github.com/A1exLima">
               <FaGithub />
             </NavLink>

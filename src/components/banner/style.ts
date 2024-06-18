@@ -65,7 +65,7 @@ export const BannerContainer = styled.section`
       width: 33rem;
       height: 6rem;
       background-color: ${(props) => props.theme['blue-object']};
-      border-radius: 0.8rem;
+      border-radius: 5px;
 
       > span {
         font-size: 1.8rem;
@@ -80,7 +80,7 @@ export const BannerContainer = styled.section`
         font-size: 3rem;
       }
 
-      transition: width 0.35s ease-in-out;
+      transition: width 0.45s ease-in-out;
 
       &:hover {
         width: 36rem;

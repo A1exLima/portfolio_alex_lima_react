@@ -33,7 +33,7 @@ export function PortfolioContent() {
   >([])
   const [buttonsClicked, setButtonsClicked] = useState<string[]>([])
 
-  const [filterVisible, setFilterVisible] = useState<boolean | string>('')
+  const [filterVisible, setFilterVisible] = useState<boolean>(false)
 
   useEffect(() => {
     setTechnologyFilterOptions(Object.keys(technologyIcons))
@@ -69,6 +69,11 @@ export function PortfolioContent() {
 
   const handleFilterButton = () => {
     setFilterVisible((prevState) => !prevState)
+
+    if (filterVisible) {
+      setFilteredProjects(projectsArray)
+      setButtonsClicked([])
+    }
   }
 
   return (
