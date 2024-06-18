@@ -2,6 +2,10 @@ import { ContactButton, ContactContainer, FormContainer } from './style'
 
 import { ReactElement } from 'react'
 import { NavLink } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+
+import { zodResolver } from '@hookform/resolvers/zod'
+import * as zod from 'zod'
 
 import { Tooltip, tooltipClasses } from '@mui/material'
 import { styled } from '@mui/material/styles'
@@ -36,7 +40,31 @@ const CustomTooltip = styled(({ className, ...props }: CustomTooltipProps) => (
   },
 }))
 
+const messageFormValidationSchema = zod.object({
+  name: zod.string().min(3, 'Digite seu nome'),
+  email: zod.string().email('Digite um E-mail válido'),
+  subject: zod.string().min(3, 'Digite o assunto'),
+  message: zod.string().min(3, 'Digite uma mensagem'),
+})
+
+type ObjectMessageFormProps = zod.infer<typeof messageFormValidationSchema>
+
 export function Contact() {
+  const { register, handleSubmit, formState, reset } = useForm({
+    resolver: zodResolver(messageFormValidationSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    },
+  })
+
+  const handleCreateMessageForm = (data: ObjectMessageFormProps) => {
+    console.log(data)
+    reset()
+  }
+
   return (
     <ContactContainer>
       <h2>
@@ -51,19 +79,48 @@ export function Contact() {
           início ao seu projeto!
         </p>
 
-        <form action="">
+        <form action="" onSubmit={handleSubmit(handleCreateMessageForm)}>
           <FormContainer>
-            <input id="name" type="text" placeholder="Nome *" />
-            <input id="email" type="email" placeholder="Email *" />
-            <input id="subject" type="text" placeholder="Assunto *" />
+            {formState.errors.name && (
+              <span className="error">{formState.errors.name.message}</span>
+            )}
+            <input
+              id="name"
+              type="text"
+              placeholder="Nome *"
+              {...register('name')}
+            />
 
+            {formState.errors.email && (
+              <span className="error">{formState.errors.email.message}</span>
+            )}
+            <input
+              id="email"
+              type="text"
+              placeholder="Email *"
+              {...register('email')}
+            />
+
+            {formState.errors.subject && (
+              <span className="error">{formState.errors.subject.message}</span>
+            )}
+            <input
+              id="subject"
+              type="text"
+              placeholder="Assunto *"
+              {...register('subject')}
+            />
+
+            {formState.errors.message && (
+              <span className="error">{formState.errors.message.message}</span>
+            )}
             <textarea
-              name="message"
               id="message"
               placeholder="Mensagem *"
+              {...register('message')}
             ></textarea>
 
-            <button type="button">ENVIAR</button>
+            <button type="submit">ENVIAR</button>
           </FormContainer>
         </form>
       </div>

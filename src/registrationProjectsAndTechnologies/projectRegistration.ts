@@ -20,7 +20,7 @@ export interface projectRegistrationProps {
 export const projectRegistration: projectRegistrationProps[] = [
   {
     id: 1,
-    name: '1',
+    name: 'Teste',
     image: 'foodExplorer.jpg',
     description:
       'Aplicação para um restaurante, onde o cliente terá acesso a um menu com todos os pratos oferecidos, podendo finalizar a compra das opções adicionadas no carrinho.Aplicação para um restaurante, onde o cliente terá acesso a um menu com todos os pratos oferecidos, podendo finalizar a compra das opções adicionadas no carrinho.Aplicação para um restaurante, onde o cliente terá acesso a um menu com todos os pratos oferecidos, podendo finalizar a compra das opções adicionadas no carrinho.',

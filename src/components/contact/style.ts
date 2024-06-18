@@ -79,6 +79,12 @@ export const FormContainer = styled.div`
   flex-direction: column;
   gap: 2rem;
 
+  .error {
+    color: ${(props) => props.theme['text-validation']};
+    font-size: 1.25rem;
+    margin: 0 0 -1.2rem 1.6rem;
+  }
+
   > input {
     border: none;
     background: none;
@@ -109,7 +115,6 @@ export const FormContainer = styled.div`
   > textarea {
     height: 15rem;
     resize: none;
-    margin-top: 2rem;
 
     border: none;
     background: none;
@@ -156,7 +161,7 @@ export const ContactButton = styled.button`
   cursor: pointer;
   border: 2px solid ${(props) => props.theme['child-border']};
   border-radius: 8px;
-  background-color: ${(props) => props.theme['child-container']};
+  background-color: ${(props) => props.theme['background-theme']};
 
   width: 6.8rem;
   height: 7rem;
