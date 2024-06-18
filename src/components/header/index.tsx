@@ -1,9 +1,10 @@
-import { Brand, HeaderContainer, Menu } from './style'
+import { Brand, HeaderContainer, Menu, SideBar } from './style'
 
 import arrowLeft from '../../assets/icons/arrowLeft.svg'
 import arrowRight from '../../assets/icons/arrowRight.svg'
 import bar from '../../assets/icons/bar.svg'
 import { NavLink } from 'react-router-dom'
+import { IoMenu } from 'react-icons/io5'
 
 export function Header() {
   return (
@@ -32,6 +33,10 @@ export function Header() {
           </li>
         </ul>
       </Menu>
+
+      <SideBar>
+        <IoMenu />
+      </SideBar>
     </HeaderContainer>
   )
 }

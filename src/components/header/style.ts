@@ -2,16 +2,23 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const HeaderContainer = styled.header`
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
   height: fit-content;
-  padding: 4rem 0 10rem 0;
+  max-width: 100%;
+  padding: 4rem 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
 
+  background: ${(props) => props.theme['background-theme']};
+
   @media (max-width: 768px) {
-    padding: 4rem 0;
+    padding: 4rem 0 3rem 0;
   }
 `
 
@@ -87,5 +94,30 @@ export const Menu = styled.nav`
         }
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+
+export const SideBar = styled.nav`
+  display: none;
+
+  > svg {
+    display: flex;
+    font-size: 4.5rem;
+    color: ${(props) => props.theme.textInUpperCase};
+    cursor: pointer;
+
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: ${(props) => props.theme['blue-text']};
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: block;
   }
 `
