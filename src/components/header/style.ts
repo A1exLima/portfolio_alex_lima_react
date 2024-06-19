@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
 
 export const HeaderContainer = styled.header`
   position: sticky;
@@ -50,6 +50,7 @@ export const Menu = styled.nav`
     gap: 4rem;
 
     > li {
+      cursor: pointer;
       position: relative;
       display: flex;
       align-items: center;
@@ -154,6 +155,7 @@ export const MenuSideBar = styled.nav`
     list-style-type: none;
 
     > li {
+      cursor: pointer;
       position: relative;
       display: flex;
       align-items: center;

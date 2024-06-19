@@ -21,7 +21,7 @@ import { TbNotesOff } from 'react-icons/tb'
 import { MdFilterList } from 'react-icons/md'
 import { IoClose } from 'react-icons/io5'
 
-export function PortfolioContent() {
+export function PortfolioContent({ id }: { id: string }) {
   const [technologyFilterOptions, setTechnologyFilterOptions] = useState<
     string[]
   >([])
@@ -77,7 +77,7 @@ export function PortfolioContent() {
   }
 
   return (
-    <PortfolioContainer>
+    <PortfolioContainer id={id}>
       <h2>
         Projetos <span>.</span>
       </h2>

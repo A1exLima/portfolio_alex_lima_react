@@ -12,7 +12,7 @@ import {
 
 import { useEffect, useState } from 'react'
 
-export function Knowledge() {
+export function Knowledge({ id }: { id: string }) {
   const [knowledgeKey, setKnowledgeKey] = useState<string[]>([])
   const [knowledgeText, setKnowledgeText] = useState<string>(
     '/* Clique no card para saber sobre a tecnologia */',
@@ -31,7 +31,7 @@ export function Knowledge() {
   }
 
   return (
-    <KnowledgeContainer>
+    <KnowledgeContainer id={id}>
       <h2>
         Conhecimentos <span>.</span>
       </h2>
