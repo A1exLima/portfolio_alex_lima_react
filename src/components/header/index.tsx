@@ -79,7 +79,7 @@ export function Header() {
                     spy={true}
                     smooth={true}
                     offset={-135}
-                    duration={1000}
+                    duration={1500}
                     onClick={waitAndCloseMenu}
                   >
                     {option.name}
