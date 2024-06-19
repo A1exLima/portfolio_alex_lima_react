@@ -18,10 +18,9 @@ export const HeaderContainer = styled.header`
   background: ${(props) => props.theme['background-theme']};
 
   @media (max-width: 768px) {
-    padding: 4rem 0 3rem 0;
+    padding: 4rem 1rem 3rem 1rem;
   }
 `
-
 export const Brand = styled(Link)`
   border-bottom: 1px solid none;
   width: fit-content;
@@ -101,10 +100,11 @@ export const Menu = styled.nav`
   }
 `
 
-export const SideBar = styled.nav`
+export const SideBar = styled.div`
   display: none;
 
-  > svg {
+  .open-button,
+  .close-button {
     display: flex;
     font-size: 4.5rem;
     color: ${(props) => props.theme.textInUpperCase};
@@ -117,7 +117,62 @@ export const SideBar = styled.nav`
     }
   }
 
+  .menu-open {
+    right: 0;
+  }
+
   @media (max-width: 768px) {
     display: block;
+  }
+`
+
+export const MenuSideBar = styled.nav`
+  width: 100%;
+  height: 100vh;
+
+  position: fixed;
+  top: 11.7rem;
+  z-index: -1;
+  right: -100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 14rem;
+  background: ${(props) => props.theme['container-theme']};
+
+  transition: right 0.4s ease-out;
+
+  > ul {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+
+    list-style-type: none;
+
+    > li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 4rem;
+      font-size: 2.8rem;
+      font-weight: 500;
+      color: ${(props) => props.theme.textInSmallCase};
+
+      transition: all 0.3s ease-in-out 0s;
+
+      &:hover {
+        color: ${(props) => props.theme['blue-text']};
+      }
+
+      > a {
+        &.active {
+          color: ${(props) => props.theme['blue-text']};
+        }
+      }
+    }
   }
 `

@@ -1,12 +1,43 @@
-import { Brand, HeaderContainer, Menu, SideBar } from './style'
+import { Brand, HeaderContainer, Menu, MenuSideBar, SideBar } from './style'
+
+import { useState } from 'react'
 
 import arrowLeft from '../../assets/icons/arrowLeft.svg'
 import arrowRight from '../../assets/icons/arrowRight.svg'
 import bar from '../../assets/icons/bar.svg'
 import { NavLink } from 'react-router-dom'
-import { IoMenu } from 'react-icons/io5'
+import { IoMenu, IoClose } from 'react-icons/io5'
+
+const menuOptions = [
+  {
+    id: 1,
+    name: 'Sobre',
+    link: '/about',
+  },
+  {
+    id: 2,
+    name: 'Projetos',
+    link: '/project',
+  },
+  {
+    id: 3,
+    name: 'Conhecimentos',
+    link: '/knowledge',
+  },
+  {
+    id: 4,
+    name: 'Contato',
+    link: '/contact',
+  },
+]
 
 export function Header() {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   return (
     <HeaderContainer>
       <Brand to="/">
@@ -19,23 +50,30 @@ export function Header() {
 
       <Menu>
         <ul>
-          <li>
-            <NavLink to="/about">Sobre</NavLink>
-          </li>
-          <li>
-            <NavLink to="/project">projetos</NavLink>
-          </li>
-          <li>
-            <NavLink to="/knowledge">Conhecimentos</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">Contato</NavLink>
-          </li>
+          {menuOptions.map((option) => (
+            <li key={option.id}>
+              <NavLink to={option.link}>{option.name}</NavLink>
+            </li>
+          ))}
         </ul>
       </Menu>
 
       <SideBar>
-        <IoMenu />
+        {!menuOpen ? (
+          <IoMenu className="open-button" onClick={toggleMenu} />
+        ) : (
+          <IoClose className="close-button" onClick={toggleMenu} />
+        )}
+
+        <MenuSideBar className={`${menuOpen ? 'menu-open' : ''}`}>
+          <ul>
+            {menuOptions.map((option) => (
+              <li key={option.id}>
+                <NavLink to={option.link}>{option.name}</NavLink>
+              </li>
+            ))}
+          </ul>
+        </MenuSideBar>
       </SideBar>
     </HeaderContainer>
   )

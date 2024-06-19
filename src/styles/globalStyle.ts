@@ -7,10 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
-    &:focus {
-     outline: 1px solid ${(props) => props.theme.textInSmallCase};
-     border-radius: 1px;
-    }
+
   }
 
   :root {
