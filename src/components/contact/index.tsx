@@ -62,7 +62,7 @@ const messageFormValidationSchema = zod.object({
 
 type ObjectMessageFormProps = zod.infer<typeof messageFormValidationSchema>
 
-export function Contact({ id }: { id: string }) {
+export function Contact() {
   const { register, handleSubmit, formState, reset } = useForm({
     resolver: zodResolver(messageFormValidationSchema),
     defaultValues: {
@@ -108,7 +108,7 @@ export function Contact({ id }: { id: string }) {
   }
 
   return (
-    <ContactContainer id={id}>
+    <ContactContainer>
       <h2>
         Contato <span>.</span>
       </h2>

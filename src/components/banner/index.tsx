@@ -5,12 +5,12 @@ import { MdWhatsapp } from 'react-icons/md'
 
 import { TypingAnimation } from '../TypingAnimation'
 
-export function Banner({ id }: { id: string }) {
+export function Banner() {
   const textToType =
     'Comprometimento com a excelência, buscando constantemente maximizar o desempenho e contribuir para o sucesso harmonioso e produtivo.'
 
   return (
-    <BannerContainer id={id}>
+    <BannerContainer>
       <div>
         <h1>
           Capacidade de adaptar-se rapidamente a

@@ -8,12 +8,8 @@ export function Footer() {
       <div>
         <p>Copyright © 2024</p>
         <span>
-          <a
-            href="https://www.linkedin.com/in/a1exlima/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            alexcode.com
+          <a href="https://alexcode.com.br/" target="_blank" rel="noreferrer">
+            alexcode.com.br
           </a>
         </span>
         <p>Todos os direitos reservados.</p>

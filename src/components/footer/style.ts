@@ -55,7 +55,7 @@ export const FooterContainer = styled.footer`
     padding: 0 0 4rem 0;
   }
 
-  @media (max-width: 580px) {
+  @media (max-width: 600px) {
     > span {
       display: none;
     }
@@ -66,7 +66,7 @@ export const FooterContainer = styled.footer`
     }
   }
 
-  @media (max-width: 460px) {
+  @media (max-width: 485px) {
     > div {
       flex-direction: column;
       align-items: center;

@@ -9,9 +9,9 @@ import { FaGithub } from 'react-icons/fa'
 
 import alexLima from '../../assets/images/about/alexLima.png'
 
-export function About({ id }: { id: string }) {
+export function About() {
   return (
-    <AboutContainer id={id}>
+    <AboutContainer>
       <figure>
         <img src={alexLima} alt="" />
       </figure>
