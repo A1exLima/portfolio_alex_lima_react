@@ -43,7 +43,7 @@ export const CardContainer = styled.div<CardContainerProps>`
           font-weight: 500;
           line-height: 160%;
           user-select: none;
-          color: ${(props) => props.theme.textInUpperCase};
+          color: ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
         }
 
         > div {
@@ -159,7 +159,7 @@ export const CardContainer = styled.div<CardContainerProps>`
         font-size: 2.4rem;
         font-weight: 500;
         line-height: 160%;
-        color: ${(props) => props.theme.textInUpperCase};
+        color: ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
       }
 
       > span {
@@ -185,7 +185,7 @@ export const CardContainer = styled.div<CardContainerProps>`
         cursor: pointer;
         width: 100%;
         height: 100%;
-        opacity: 0.7;
+        opacity: 0.85;
         background-image: url(${(props) => props.$background});
         background-size: cover;
         background-position: top;
