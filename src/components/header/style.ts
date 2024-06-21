@@ -49,7 +49,7 @@ export const Menu = styled.nav`
     align-items: center;
     gap: 4rem;
 
-    > li {
+    > a {
       cursor: pointer;
       position: relative;
       display: flex;
@@ -154,7 +154,7 @@ export const MenuSideBar = styled.nav`
 
     list-style-type: none;
 
-    > li {
+    > a {
       cursor: pointer;
       position: relative;
       display: flex;

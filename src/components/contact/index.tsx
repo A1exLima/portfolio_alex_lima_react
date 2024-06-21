@@ -127,6 +127,7 @@ export function Contact() {
               <span className="error">{formState.errors.name.message}</span>
             )}
             <input
+              title="Digite seu nome"
               id="name"
               type="text"
               placeholder="Nome *"
@@ -137,6 +138,7 @@ export function Contact() {
               <span className="error">{formState.errors.email.message}</span>
             )}
             <input
+              title="Digite um e-mail válido"
               id="email"
               type="text"
               placeholder="Email *"
@@ -147,6 +149,7 @@ export function Contact() {
               <span className="error">{formState.errors.subject.message}</span>
             )}
             <input
+              title="Digite o assunto"
               id="subject"
               type="text"
               placeholder="Assunto *"
@@ -157,6 +160,7 @@ export function Contact() {
               <span className="error">{formState.errors.message.message}</span>
             )}
             <textarea
+              title="Digite uma mensagem"
               id="message"
               placeholder="Mensagem *"
               {...register('message')}

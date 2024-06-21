@@ -28,7 +28,7 @@ export function Home() {
       case 'about':
         return (
           <Helmet>
-            <title>Sobre Alex Lima - Front-End Developer</title>
+            <title>Sobre - Alex Lima Front-End Developer</title>
             <meta
               name="description"
               content="Eu sou o Alex Lima, um desenvolvedor web front-end focado em construir interfaces intuitivas e responsivas. Com experiência sólida em HTML, CSS, JavaScript e React, estou sempre em busca de novos desafios para aprimorar minhas habilidades e oferecer soluções inovadoras aos meus clientes."
@@ -38,7 +38,7 @@ export function Home() {
       case 'projects':
         return (
           <Helmet>
-            <title>Projetos de Alex Lima - Desenvolvimento Front-End</title>
+            <title>Projetos - Alex Lima Front-End Developer</title>
             <meta
               name="description"
               content="Aqui estão alguns dos projetos que desenvolvi, demonstrando minha expertise em criar soluções web eficientes e atraentes. Cada projeto reflete meu compromisso com a qualidade e a experiência do usuário."
@@ -48,7 +48,7 @@ export function Home() {
       case 'knowledge':
         return (
           <Helmet>
-            <title>Conhecimentos de Alex Lima - Tecnologias Front-End</title>
+            <title>Conhecimentos - Alex Lima Front-End Developer</title>
             <meta
               name="description"
               content="Explore minha expertise em tecnologias front-end através desses cards interativos. Cada tecnologia representa meu compromisso em dominar ferramentas essenciais para oferecer soluções web de alto desempenho e impacto visual."
@@ -58,7 +58,7 @@ export function Home() {
       case 'contact':
         return (
           <Helmet>
-            <title>Contato com Alex Lima - Desenvolvedor Front-End</title>
+            <title>Contato - Alex Lima Front-End Developer</title>
             <meta
               name="description"
               content="Vamos iniciar uma conversa sobre seu projeto? Preencha o formulário abaixo ou conecte-se diretamente através dos botões de contato. Estou ansioso para ouvir sobre suas ideias e colaborar para transformá-las em realidade."

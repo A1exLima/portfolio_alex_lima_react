@@ -42,7 +42,7 @@ export function Card({ projectData }: CardProps) {
               <NavLink
                 target="_blank"
                 to={projectData.linkGitHub}
-                title="Repositório GitHub."
+                title={`Repositório GitHub: ${projectData.name}`}
               >
                 <FaGithub />
               </NavLink>
@@ -86,7 +86,10 @@ export function Card({ projectData }: CardProps) {
         </div>
 
         <NavLink target="_blank" to={projectData.link}>
-          <div className="container-background" title={projectData.link}></div>
+          <div
+            className="container-background"
+            title={`Acesse: ${projectData.link}`}
+          ></div>
         </NavLink>
       </div>
     </CardContainer>

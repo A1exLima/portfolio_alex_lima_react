@@ -62,7 +62,7 @@ export function Header() {
       >
         <span>ALEX</span>
         <img src={arrowLeft} alt="" />
-        <span>LIMA</span>
+        <span>CODE</span>
         <img src={bar} alt="" />
         <img src={arrowRight} alt="" />
       </Brand>
@@ -72,19 +72,18 @@ export function Header() {
           {menuOptions.map(
             (option) =>
               option.id !== 1 && (
-                <li key={option.id}>
-                  <Link
-                    activeClass="active"
-                    to={option.link}
-                    spy={true}
-                    smooth={true}
-                    offset={-135}
-                    duration={1500}
-                    onClick={waitAndCloseMenu}
-                  >
-                    {option.name}
-                  </Link>
-                </li>
+                <Link
+                  key={option.id}
+                  activeClass="active"
+                  to={option.link}
+                  spy={true}
+                  smooth={true}
+                  offset={-135}
+                  duration={1500}
+                  onClick={waitAndCloseMenu}
+                >
+                  <li>{option.name}</li>
+                </Link>
               ),
           )}
         </ul>
@@ -100,19 +99,18 @@ export function Header() {
         <MenuSideBar className={`${menuOpen ? 'menu-open' : ''}`}>
           <ul>
             {menuOptions.map((option) => (
-              <li key={option.id}>
-                <Link
-                  activeClass="active"
-                  to={option.link}
-                  spy={true}
-                  smooth={true}
-                  offset={-110}
-                  duration={1000}
-                  onClick={waitAndCloseMenu}
-                >
-                  {option.name}
-                </Link>
-              </li>
+              <Link
+                key={option.id}
+                activeClass="active"
+                to={option.link}
+                spy={true}
+                smooth={true}
+                offset={-110}
+                duration={1000}
+                onClick={waitAndCloseMenu}
+              >
+                <li>{option.name}</li>
+              </Link>
             ))}
           </ul>
         </MenuSideBar>

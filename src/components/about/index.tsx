@@ -13,7 +13,7 @@ export function About() {
   return (
     <AboutContainer>
       <figure>
-        <img src={alexLima} alt="" />
+        <img src={alexLima} alt="Alex Lima desenvolvedor front-end" />
       </figure>
 
       <div>
