@@ -9,6 +9,7 @@ import { ReactElement, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 
+import { emailJsConfig } from '../../config/emailJsConfig'
 import emailjs from '@emailjs/browser'
 
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -63,6 +64,10 @@ const messageFormValidationSchema = zod.object({
 type ObjectMessageFormProps = zod.infer<typeof messageFormValidationSchema>
 
 export function Contact() {
+  const serviceID = emailJsConfig.SERVICE_ID
+  const templateId = emailJsConfig.TEMPLATE_ID
+  const publicKey = emailJsConfig.PUBLIC_KEY
+
   const { register, handleSubmit, formState, reset } = useForm({
     resolver: zodResolver(messageFormValidationSchema),
     defaultValues: {
@@ -88,12 +93,7 @@ export function Contact() {
     }
 
     try {
-      await emailjs.send(
-        'service_df6sjvb',
-        'template_ycfhqgi',
-        templateParams,
-        'Bhs9f21KblasGkFIM',
-      )
+      await emailjs.send(serviceID, templateId, templateParams, publicKey)
 
       setMessageAlert('Mensagem enviada com sucesso!')
       setColorMessage(false)
