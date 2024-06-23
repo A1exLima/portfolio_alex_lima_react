@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   width: 100%;
   height: fit-content;
   max-width: 100%;
-  padding: 4rem 0;
+  padding: 3rem 0;
 
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@ export const HeaderContainer = styled.header`
   background: ${(props) => props.theme['background-theme']};
 
   @media (max-width: 768px) {
-    padding: 4rem 1rem 3rem 1rem;
+    padding: 3rem 1rem 3rem 1rem;
   }
 `
 export const Brand = styled(Link)`

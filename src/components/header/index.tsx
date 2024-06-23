@@ -78,7 +78,7 @@ export function Header() {
                   to={option.link}
                   spy={true}
                   smooth={true}
-                  offset={-135}
+                  offset={-110}
                   duration={1500}
                   onClick={waitAndCloseMenu}
                 >
@@ -105,7 +105,7 @@ export function Header() {
                 to={option.link}
                 spy={true}
                 smooth={true}
-                offset={-110}
+                offset={-95}
                 duration={1000}
                 onClick={waitAndCloseMenu}
               >
