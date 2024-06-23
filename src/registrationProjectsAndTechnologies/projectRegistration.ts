@@ -258,7 +258,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     name: 'Rocket Movies Api',
     image: 'backEndListaFilmes.jpg',
     description:
-      'Aplicação Back-end robusta que permite aos usuários cadastrar notas para filmes, incluindo informações como nome, descrição e nota. Além disso, oferece a funcionalidade de criar tags relacionadas a cada filme, proporcionando uma organização eficiente e flexível dos dados.',
+      'Aplicação Back-End que permite aos usuários cadastrar notas para filmes, incluindo informações como nome, descrição e nota. Além disso, oferece a funcionalidade de criar tags relacionadas a cada filme, proporcionando uma organização eficiente e flexível dos dados.',
     link: 'https://github.com/A1exLima/rocketseat-stage8-backend-desafio',
     linkGitHub: 'https://github.com/A1exLima/rocketseat-stage8-backend-desafio',
     technologies: ['javaScript', 'nodeJs', 'express', 'sqLite', 'knex', 'api'],
@@ -295,7 +295,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     name: 'Food Explorer Api',
     image: 'backEndFoodExplorer.jpg',
     description:
-      'FoodExplorer API: Back-End robusto desenvolvido para o ecossistema FoodExplorer, utilizando tecnologias avançadas como bcryptJS para criptografia, jsonwebtoken para autenticação, cookie-parser para manipulação de cookies, multer para upload de arquivos, cors para controle de acesso HTTP, dotenv para gerenciamento de variáveis de ambiente e pm2 para gerenciamento de processos. Um sistema seguro e eficiente para suportar todas as necessidades da plataforma.',
+      'Api Back-End robusta, foi desenvolvida para o ecossistema FoodExplorer, utilizando tecnologias avançadas como bcryptJS para criptografia, jsonwebtoken para autenticação, cookie-parser para manipulação de cookies, multer para upload de arquivos, cors para controle de acesso HTTP, dotenv para gerenciamento de variáveis de ambiente e pm2 para gerenciamento de processos. Um sistema seguro e eficiente para suportar todas as necessidades da plataforma.',
     link: 'https://github.com/A1exLima/food_explorer_back_end',
     linkGitHub: 'https://github.com/A1exLima/food_explorer_back_end',
     technologies: ['javaScript', 'nodeJs', 'express', 'sqLite', 'knex', 'api'],
@@ -319,7 +319,7 @@ export const projectRegistration: projectRegistrationProps[] = [
     name: 'Social Network',
     image: 'socialNetwork.jpg',
     description:
-      'Social Network: Explorando os fundamentos e aspectos avançados do desenvolvimento web com React. Este projeto inicia com conceitos essenciais como componentes e propriedades, além do uso de useState para gerenciar estados locais. Também abrange ferramentas fundamentais como Webpack e Babel para compilação e empacotamento de código.',
+      'Projeto desenvolvido com o intuito de explorar os fundamentos e aspectos avançados do desenvolvimento web com React. Este projeto inicia com conceitos essenciais como componentes e propriedades, além do uso de useState para gerenciar estados locais. Também abrange ferramentas fundamentais como Webpack e Babel para compilação e empacotamento de código.',
     link: 'https://gehhusocialnetwork.netlify.app/',
     linkGitHub:
       'https://github.com/A1exLima/social_network_react_study_type_script',
