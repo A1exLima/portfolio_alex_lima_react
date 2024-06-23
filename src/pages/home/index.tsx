@@ -74,32 +74,6 @@ export function Home() {
               name="description"
               content="Conheça o portfólio de Alex Lima, desenvolvedor front-end especializado em criar interfaces web de alta qualidade com HTML, CSS, JavaScript, integrações API RESTful e React, além de familiaridade com Node.js, SQLite, Knex e mais"
             />
-            <meta
-              name="keywords"
-              content="Portfólio desenvolvedor Alex Lima front-end, HTML, CSS, JavaScript, API RESTful, React, Node.js, SQLite e Knex."
-            />
-            <meta name="author" content="Alex da Silva Lima" />
-            <meta
-              property="og:title"
-              content="Alex Lima - Portfólio de Desenvolvedor Front-End"
-            />
-            <meta
-              property="og:description"
-              content="Portfólio de Alex Lima, desenvolvedor front-end especializado em HTML, CSS, JavaScript, React, e mais. Explore minhas habilidades, experiência e projetos destacados."
-            />
-            <meta property="og:image" content="/card.png" />
-            <meta property="og:url" content="https://alexcode.com.br/" />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta
-              name="twitter:title"
-              content="Alex Lima - Portfólio de Desenvolvedor Front-End"
-            />
-            <meta
-              name="twitter:description"
-              content="Portfólio de Alex Lima, desenvolvedor front-end especializado em HTML, CSS, JavaScript, React, e mais. Explore minhas habilidades, experiência e projetos destacados."
-            />
-            <meta name="twitter:image" content="/card.png" />
-            <meta name="robots" content="index, follow" />
           </Helmet>
         )
     }

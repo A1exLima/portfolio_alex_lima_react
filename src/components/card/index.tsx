@@ -25,7 +25,7 @@ export function Card({ projectData }: CardProps) {
 
   return (
     <CardContainer
-      $background={`src/assets/images/imageProjects/${projectData.image}`}
+      $background={`/imageProjects/${projectData.image}`}
       $color={projectData.color}
       className={`rotating ${rotatedProjectId === projectData.id ? 'rotated' : ''}`}
     >
