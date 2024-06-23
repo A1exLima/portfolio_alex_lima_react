@@ -9,7 +9,7 @@ interface CardContainerProps {
 
 export const CardContainer = styled.div<CardContainerProps>`
   cursor: pointer;
-  min-height: 30rem;
+  min-height: 32.5rem;
   background-color: ${(props) => props.theme['child-container']};
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
 
@@ -32,26 +32,53 @@ export const CardContainer = styled.div<CardContainerProps>`
     > div:nth-child(1) {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
+
+      > p:first-child {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: ${(props) => props.theme.textInSmallCase};
+        margin-bottom: -0.8rem;
+      }
 
       > div {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 1rem;
+
+        @media (max-width: 820px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        @media (max-width: 768px) {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        @media (max-width: 440px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
         > h2 {
-          font-size: 2.4rem;
+          font-size: clamp(1.9rem, 2vw, 2.4rem);
           font-weight: 500;
           line-height: 160%;
           user-select: none;
           color: ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
+
+          @media (max-width: 768px) {
+            font-size: 2.4rem;
+          }
         }
 
         > div {
-          width: 6.5rem;
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-end;
+          gap: 0.5rem;
 
           > a {
             display: flex;
@@ -89,10 +116,17 @@ export const CardContainer = styled.div<CardContainerProps>`
         overflow: hidden;
         text-overflow: ellipsis;
         user-select: none;
-        font-size: 1.8rem;
+        font-size: clamp(1.5rem, 1.5vw, 1.8rem);
+
         font-weight: 400;
         line-height: 140%;
         color: ${(props) => props.theme.textInSmallCase};
+
+        margin-top: 0.5rem;
+
+        @media (max-width: 768px) {
+          font-size: 1.8rem;
+        }
       }
     }
 
@@ -107,21 +141,26 @@ export const CardContainer = styled.div<CardContainerProps>`
         opacity: 0.85;
         user-select: none;
         white-space: nowrap;
-        font-size: 2.2rem;
+        font-size: clamp(1.8rem, 1.7vw, 2.2rem);
         font-weight: 500;
         color: ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
 
-        transition: all 0.4s ease-in-out;
+        transition:
+          opacity 0.4s ease-in-out,
+          filter 0.4s ease-in-out;
 
         &:hover {
           opacity: 1;
           filter: brightness(125%);
         }
+
+        @media (max-width: 768px) {
+          font-size: 2.2rem;
+        }
       }
 
       > div {
         height: fit-content;
-        padding: 0.2rem;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -156,11 +195,19 @@ export const CardContainer = styled.div<CardContainerProps>`
       justify-content: space-between;
 
       > h2 {
-        user-select: none;
-        font-size: 2.4rem;
+        font-size: clamp(1.9rem, 2vw, 2.4rem);
         font-weight: 500;
         line-height: 160%;
+        user-select: none;
         color: ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
+
+        @media (max-width: 768px) {
+          font-size: 2.4rem;
+        }
+
+        @media (max-width: 380px) {
+          font-size: clamp(1.8rem, 4.5vw, 2.2rem);
+        }
       }
 
       > span {
@@ -223,17 +270,21 @@ export const CardContainer = styled.div<CardContainerProps>`
     }
   }
 
-  @media (max-width: 360px) {
-    min-height: 34rem;
-  }
-
   @media (max-width: 1120px) {
     .front {
       > div:nth-child(2) {
         flex-direction: column-reverse;
         align-items: start;
-        gap: 2rem;
+        gap: 1.5rem;
       }
     }
+  }
+
+  @media (max-width: 440px) {
+    min-height: 35.5rem;
+  }
+
+  @media (max-width: 360px) {
+    min-height: 38.5rem;
   }
 `

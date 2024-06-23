@@ -1,22 +1,17 @@
 export const BASE_COLORS = {
-  gray: 'project-gray',
-  red: 'project-red',
   blue: 'project-blue',
-  blue2: 'project-blue2',
-  blue3: 'project-blue3',
-  violet: 'project-violet',
-  purple: 'project-purple',
-  purple2: 'project-purple2',
-  purple3: 'project-purple3',
-  green: 'project-green',
-  orange: 'project-orange',
-  orange2: 'project-orange2',
-  green2: 'project-green2',
   green3: 'project-green3',
+  orange: 'project-orange',
+  red: 'project-red',
+  purple: 'project-purple',
+  green: 'project-green',
+  gray: 'project-gray',
+  violet: 'project-violet',
 } as const
 
 export interface projectRegistrationProps {
   id: number
+  date: string
   name: string
   image: string
   description: string
@@ -29,6 +24,7 @@ export interface projectRegistrationProps {
 export const projectRegistration: projectRegistrationProps[] = [
   {
     id: 1,
+    date: '23/01/2023',
     name: 'Habits Tracker',
     image: 'habitsTracker.jpg',
     description:
@@ -37,10 +33,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rockeatSeat_Nlw_Setup_Habits_Tracker',
     technologies: ['html', 'css', 'javaScript'],
-    color: 'purple',
+    color: 'green3',
   },
   {
     id: 2,
+    date: '25/01/2023',
     name: 'Flutuar Viagens',
     image: 'pacoteViagens.jpg',
     description:
@@ -48,10 +45,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://a1exlima.github.io/rocketseat-stage2-intro-html-css/',
     linkGitHub: 'https://github.com/A1exLima/rocketseat-stage2-intro-html-css',
     technologies: ['html', 'css'],
-    color: 'violet',
+    color: 'blue',
   },
   {
     id: 3,
+    date: '26/01/2023',
     name: 'Ambientes Únicos',
     image: 'ambientesUnicos.jpg',
     description:
@@ -60,10 +58,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage2-intro-html-css-desafio-correcao-bug',
     technologies: ['html', 'css'],
-    color: 'orange',
+    color: 'violet',
   },
   {
     id: 4,
+    date: '26/01/2023',
     name: 'Rocket.sect',
     image: 'rocketSect.jpg',
     description:
@@ -72,10 +71,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage2-intro-html-css-desafio-avancado',
     technologies: ['html', 'css'],
-    color: 'green2',
+    color: 'gray',
   },
   {
     id: 5,
+    date: '27/01/2023',
     name: 'Treine.me',
     image: 'treineMe.jpg',
     description:
@@ -84,11 +84,12 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage2-intro-html-css-desafio-correcao-bug-2',
     technologies: ['html', 'css'],
-    color: 'blue2',
+    color: 'green',
   },
   {
     id: 6,
-    name: 'Formulário de Mentoria',
+    date: '31/01/2023',
+    name: 'Form. de Mentoria',
     image: 'formMentoria.jpg',
     description:
       'Projetado para facilitar o cadastro e agendamento de mentoria. Este formulário integra design intuitivo com funcionalidade prática, proporcionando uma experiência simplificada e eficaz para os usuários.',
@@ -96,10 +97,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage3-criando-formularios-intermedirio',
     technologies: ['html', 'css'],
-    color: 'purple2',
+    color: 'purple',
   },
   {
     id: 7,
+    date: '01/02/2023',
     name: 'Avaliação de Mentoria',
     image: 'avalMentoria.jpg',
     description:
@@ -108,10 +110,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage3-criando-formularios-avancado',
     technologies: ['html', 'css'],
-    color: 'orange2',
+    color: 'red',
   },
   {
     id: 8,
+    date: '01/03/2023',
     name: 'Tutorial Display Grid',
     image: 'tutorialGrid.jpg',
     description:
@@ -120,10 +123,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage3-revisao-display-grid',
     technologies: ['html', 'css'],
-    color: 'purple',
+    color: 'orange',
   },
   {
     id: 9,
+    date: '06/04/2023',
     name: 'SPA Universe',
     image: 'spaUniverse.jpg',
     description:
@@ -132,10 +136,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage6-desafio-spa-universe',
     technologies: ['html', 'css', 'javaScript'],
-    color: 'blue3',
+    color: 'green3',
   },
   {
     id: 10,
+    date: '10/04/2023',
     name: 'Discovery Portfólio',
     image: 'discPortfolio.jpg',
     description:
@@ -144,10 +149,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-discovery-projeto-portfolio',
     technologies: ['html', 'css'],
-    color: 'purple2',
+    color: 'blue',
   },
   {
     id: 11,
+    date: '15/02/2023',
     name: 'Jogo da Adivinhação',
     image: 'game.jpg',
     description:
@@ -156,10 +162,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage5-jogo-adivinhacao',
     technologies: ['html', 'css', 'javaScript'],
-    color: 'purple',
+    color: 'violet',
   },
   {
     id: 12,
+    date: '21/04/2023',
     name: 'Tutorial Space Cream',
     image: 'spaceCream.jpg',
     description:
@@ -168,10 +175,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage3-revisao-video-space-cream',
     technologies: ['html', 'css'],
-    color: 'green',
+    color: 'gray',
   },
   {
     id: 13,
+    date: '07/03/2023',
     name: 'Biscoito da Sorte',
     image: 'game2.jpg',
     description:
@@ -180,10 +188,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage5-desafio-biscoito-da-sorte',
     technologies: ['html', 'css', 'javaScript'],
-    color: 'purple3',
+    color: 'green',
   },
   {
     id: 14,
+    date: '10/03/2023',
     name: 'Calculadora IMC',
     image: 'calcImc.jpg',
     description:
@@ -191,10 +200,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://a1exlima.github.io/rocketseat-stage5-exercicio-imc/',
     linkGitHub: 'https://github.com/A1exLima/rocketseat-stage5-exercicio-imc',
     technologies: ['html', 'css', 'javaScript'],
-    color: 'blue',
+    color: 'purple',
   },
   {
     id: 15,
+    date: '16/03/2023',
     name: 'Focus Timer',
     image: 'focusTimer.jpg',
     description:
@@ -203,10 +213,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage5-exercicio-focus-timer',
     technologies: ['html', 'css', 'javaScript'],
-    color: 'gray',
+    color: 'red',
   },
   {
     id: 16,
+    date: '29/03/2023',
     name: 'Focus Timer 2.0',
     image: 'focusTimer2.jpg',
     description:
@@ -219,6 +230,7 @@ export const projectRegistration: projectRegistrationProps[] = [
   },
   {
     id: 17,
+    date: '18/04/2023',
     name: 'GitFav',
     image: 'gitFav.jpg',
     description:
@@ -226,10 +238,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://a1exlima.github.io/rocketseat-stage6-desafio-gitfav/',
     linkGitHub: 'https://github.com/A1exLima/rocketseat-stage6-desafio-gitfav',
     technologies: ['html', 'css', 'javaScript'],
-    color: 'purple3',
+    color: 'green3',
   },
   {
     id: 18,
+    date: '26/04/2023',
     name: 'Kanban',
     image: 'kanban.jpg',
     description:
@@ -237,10 +250,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://a1exlima.github.io/-boraCodar-desafio-12-Kanban/',
     linkGitHub: 'https://github.com/A1exLima/-boraCodar-desafio-12-Kanban',
     technologies: ['html', 'css', 'javaScript'],
-    color: 'purple',
+    color: 'blue',
   },
   {
     id: 19,
+    date: '21/07/2024',
     name: 'Rocket Movies Api',
     image: 'backEndListaFilmes.jpg',
     description:
@@ -248,10 +262,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://github.com/A1exLima/rocketseat-stage8-backend-desafio',
     linkGitHub: 'https://github.com/A1exLima/rocketseat-stage8-backend-desafio',
     technologies: ['javaScript', 'nodeJs', 'express', 'sqLite', 'knex', 'api'],
-    color: 'gray',
+    color: 'violet',
   },
   {
     id: 20,
+    date: '24/08/2023',
     name: 'Rocket Movies',
     image: 'rocketMovies.jpg',
     description:
@@ -260,10 +275,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub:
       'https://github.com/A1exLima/rocketseat-stage9-frontEnd-React-RocketMovies-desafio',
     technologies: ['html', 'javaScript', 'react', 'styledComponents'],
-    color: 'orange2',
+    color: 'gray',
   },
   {
     id: 21,
+    date: '01/02/2024',
     name: 'Key Rover',
     image: 'keyRover.jpg',
     description:
@@ -271,10 +287,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://keyrover.netlify.app/',
     linkGitHub: 'https://github.com/A1exLima/freelancer-key-rover',
     technologies: ['html', 'javaScript', 'react', 'styledComponents'],
-    color: 'orange',
+    color: 'green',
   },
   {
     id: 22,
+    date: '06/02/2024',
     name: 'Food Explorer Api',
     image: 'backEndFoodExplorer.jpg',
     description:
@@ -282,10 +299,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://github.com/A1exLima/food_explorer_back_end',
     linkGitHub: 'https://github.com/A1exLima/food_explorer_back_end',
     technologies: ['javaScript', 'nodeJs', 'express', 'sqLite', 'knex', 'api'],
-    color: 'gray',
+    color: 'purple',
   },
   {
     id: 23,
+    date: '06/02/2024',
     name: 'Food Explorer',
     image: 'foodExplorer.jpg',
     description:
@@ -293,10 +311,11 @@ export const projectRegistration: projectRegistrationProps[] = [
     link: 'https://fedelivery.netlify.app/',
     linkGitHub: 'https://github.com/A1exLima/food_explorer_front_end',
     technologies: ['html', 'javaScript', 'react', 'styledComponents', 'axios'],
-    color: 'blue',
+    color: 'red',
   },
   {
     id: 24,
+    date: '12/02/2024',
     name: 'Social Network',
     image: 'socialNetwork.jpg',
     description:
@@ -311,10 +330,11 @@ export const projectRegistration: projectRegistrationProps[] = [
       'styledComponents',
       'typeScript',
     ],
-    color: 'green3',
+    color: 'orange',
   },
   {
     id: 25,
+    date: '14/02/2024',
     name: 'Todo-List',
     image: 'todoList.jpg',
     description:
@@ -328,10 +348,11 @@ export const projectRegistration: projectRegistrationProps[] = [
       'styledComponents',
       'typeScript',
     ],
-    color: 'green',
+    color: 'green3',
   },
   {
     id: 26,
+    date: '24/05/2024',
     name: 'Portfólio Alex Code',
     image: 'portfolio.jpg',
     description:

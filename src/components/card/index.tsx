@@ -34,6 +34,7 @@ export function Card({ projectData }: CardProps) {
         onClick={() => handleClickToRotate(projectData.id)}
       >
         <div>
+          <p>{projectData.date}</p>
           <div>
             <h2>{projectData.name}</h2>
             <div>
