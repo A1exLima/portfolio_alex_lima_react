@@ -132,7 +132,7 @@ export const MenuSideBar = styled.nav`
   height: 100vh;
 
   position: fixed;
-  top: 11.7rem;
+  top: 10.75rem;
   z-index: -1;
   right: -100%;
 
