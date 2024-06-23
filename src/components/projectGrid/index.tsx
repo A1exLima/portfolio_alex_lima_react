@@ -36,11 +36,13 @@ export function ProjectGrid({ projectsArray }: ProjectsProps) {
     return () => window.removeEventListener('resize', updateProjectsPerPage)
   }, [])
 
+  const sortedProjectsArray = projectsArray.slice().sort((a, b) => b.id - a.id)
+
   const startIndex = currentPage * projectsPerPage
   const endIndex = startIndex + projectsPerPage
-  const currentProjects = projectsArray.slice(startIndex, endIndex)
+  const currentProjects = sortedProjectsArray.slice(startIndex, endIndex)
 
-  const totalPages = Math.ceil(projectsArray.length / projectsPerPage)
+  const totalPages = Math.ceil(sortedProjectsArray.length / projectsPerPage)
   const pagesArray = [...Array(totalPages).keys()]
 
   const handlePageClick = (pageNumber: number) => {

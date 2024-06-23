@@ -6,6 +6,8 @@ import {
   SiKnexdotjs,
   SiTypescript,
   SiStyledcomponents,
+  SiExpress,
+  SiAxios,
 } from 'react-icons/si'
 import { TbApi } from 'react-icons/tb'
 
@@ -14,9 +16,11 @@ export const knowledgeRegisterIcons: { [key: string]: JSX.Element } = {
   css: <IoLogoCss3 />,
   javaScript: <IoLogoJavascript />,
   react: <FaReact />,
+  axios: <SiAxios />,
   styledComponents: <SiStyledcomponents />,
   typeScript: <SiTypescript />,
   nodeJs: <IoLogoNodejs />,
+  express: <SiExpress />,
   sqLite: <SiSqlite />,
   knex: <SiKnexdotjs />,
   api: <TbApi />,
@@ -29,6 +33,8 @@ export const knowledgeRegisterText: { [key: string]: string } = {
     'JavaScript é uma linguagem de programação dinâmica e interpretada, amplamente utilizada para adicionar interatividade e comportamento aos websites. Ela permite manipular elementos HTML e CSS, responder a eventos do usuário, e comunicar-se com servidores. JavaScript é essencial para o desenvolvimento de aplicações web modernas e interativas.',
   react:
     'React é uma biblioteca JavaScript de código aberto desenvolvida pelo Facebook, usada para construir interfaces de usuário (UI) de forma eficiente e modular. Ela permite a criação de componentes reutilizáveis que gerenciam seu próprio estado, facilitando o desenvolvimento de aplicações web dinâmicas e interativas. React utiliza um conceito chamado Virtual DOM para otimizar a atualização e renderização dos componentes.',
+  axios:
+    'Axios é uma biblioteca JavaScript utilizada para fazer requisições HTTP a servidores. Ela simplifica a comunicação entre o frontend e o backend, oferecendo uma interface fácil de usar baseada em Promises. Axios suporta tanto navegadores quanto Node.js, permitindo o envio de requisições GET, POST, PUT, DELETE, e outras, além de proporcionar funcionalidades avançadas como o cancelamento de requisições e interceptores para transformar dados antes de enviar ou após receber. É amplamente adotada em aplicações modernas devido à sua simplicidade, eficiência e robustez.',
   styledComponents:
     'Styled-components é uma biblioteca para React e React Native que permite escrever estilos CSS diretamente dentro de componentes JavaScript. Utilizando tagged template literals, ela facilita a criação de estilos dinâmicos e escopados a componentes específicos, promovendo uma abordagem de "CSS-in-JS". Isso melhora a modularidade e mantém o estilo e a lógica de componentes juntos.',
   typeScript:
@@ -39,4 +45,6 @@ export const knowledgeRegisterText: { [key: string]: string } = {
     'SQLite é um banco de dados relacional leve e integrado que armazena dados em um único arquivo. Ele é autossuficiente, não requer um servidor separado, e é ideal para aplicativos embarcados, desenvolvimento, testes, e pequenos projetos. SQLite é amplamente utilizado devido à sua simplicidade, eficiência e portabilidade.',
   knex: 'Knex.js é uma biblioteca SQL query builder para Node.js, que fornece uma interface unificada para interagir com diferentes bancos de dados relacionais. Ele suporta operações como criação, leitura, atualização e exclusão de dados, além de migrações e transações. Knex.js facilita a construção de consultas complexas e melhora a portabilidade do código entre vários sistemas de gerenciamento de banco de dados.',
   api: 'API RESTful é uma interface de programação de aplicações que segue os princípios do estilo arquitetural REST (Representational State Transfer). Ela utiliza métodos HTTP como GET, POST, PUT e DELETE para manipular recursos através de URLs bem definidas. APIs RESTful são amplamente adotadas por sua simplicidade, escalabilidade e capacidade de serem facilmente integradas em diferentes sistemas e plataformas.',
+  express:
+    'Express é um framework para Node.js que facilita o desenvolvimento de aplicações web e APIs no back-end. É minimalista e flexível, permitindo a criação de servidores robustos com rapidez e eficiência. Oferece funcionalidades essenciais como roteamento, middleware e tratamento de solicitações HTTP. Sua simplicidade e extensibilidade o tornam popular para construir desde projetos pequenos até grandes aplicações empresariais. Além disso, é amplamente utilizado em conjunto com outras tecnologias, como MongoDB e Angular, para formar pilhas completas de desenvolvimento (como o MEAN stack).',
 }
