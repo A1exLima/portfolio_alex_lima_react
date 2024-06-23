@@ -8,6 +8,7 @@ interface CardContainerProps {
 }
 
 export const CardContainer = styled.div<CardContainerProps>`
+  cursor: pointer;
   min-height: 30rem;
   background-color: ${(props) => props.theme['child-container']};
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
@@ -69,7 +70,6 @@ export const CardContainer = styled.div<CardContainerProps>`
 
           > svg {
             margin-right: 0.2rem;
-            cursor: pointer;
             font-size: 2.5rem;
             color: ${(props) => props.theme.textInSmallCase};
 
@@ -104,17 +104,18 @@ export const CardContainer = styled.div<CardContainerProps>`
       gap: 0.5rem;
 
       > a {
-        cursor: pointer;
+        opacity: 0.85;
         user-select: none;
         white-space: nowrap;
-        font-size: 2rem;
-        font-weight: 400;
+        font-size: 2.2rem;
+        font-weight: 500;
         color: ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
 
-        transition: filter 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
 
         &:hover {
-          filter: brightness(120%);
+          opacity: 1;
+          filter: brightness(125%);
         }
       }
 
@@ -163,11 +164,12 @@ export const CardContainer = styled.div<CardContainerProps>`
       }
 
       > span {
-        cursor: pointer;
-        display: flex;
-        cursor: pointer;
-        font-size: 2.5rem;
-        color: ${(props) => props.theme.textInSmallCase};
+        > svg {
+          display: flex;
+          transform: scaleX(-1);
+          font-size: 2.5rem;
+          color: ${(props) => props.theme.textInSmallCase};
+        }
 
         transition: filter 0.3s ease-in-out;
 
@@ -177,52 +179,46 @@ export const CardContainer = styled.div<CardContainerProps>`
       }
     }
 
-    > a {
+    .container-background {
       width: 100%;
       height: 100%;
+      opacity: 0.85;
+      background-image: url(${(props) => props.$background});
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      border-radius: 5px;
+      box-shadow: ${({ theme }) => `${theme.textInSmallCase}20`} 0px 0px 20px
+        1px;
 
-      .container-background {
-        cursor: pointer;
+      transition: opacity 0.4s ease-in-out 0s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
         width: 100%;
-        height: 100%;
-        opacity: 0.85;
-        background-image: url(${(props) => props.$background});
-        background-size: cover;
-        background-position: top;
-        background-repeat: no-repeat;
-        border-radius: 5px;
-        box-shadow: ${({ theme }) => `${theme.textInSmallCase}20`} 0px 0px 20px
-          1px;
+        height: 2px;
+        background: ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
 
-        transition: opacity 0.4s ease-in-out 0s;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
 
-        &:hover {
-          opacity: 1;
-        }
+        -webkit-transform-origin: left;
+        -webkit-transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+      }
 
-        &:before {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-
-          width: 100%;
-          height: 2px;
-          background: ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
-
-          transform-origin: left;
-          transform: scaleX(0);
-          transition: all 0.3s ease-in-out 0s;
-
-          -webkit-transform-origin: left;
-          -webkit-transform: scaleX(0);
-          -webkit-transition: all 0.3s ease-in-out 0s;
-        }
-
-        &:hover:before {
-          transform: scaleX(1);
-          -webkit-transform: scaleX(1);
-        }
+      &:hover:before {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
       }
     }
   }

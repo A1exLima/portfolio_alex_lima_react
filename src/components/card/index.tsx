@@ -1,13 +1,9 @@
 import { CardContainer } from './style'
-
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-
 import { projectRegistrationProps } from '../../registrationProjectsAndTechnologies/projectRegistration'
 import { technologyIcons } from '../../registrationProjectsAndTechnologies/technologyIcons'
-
-import { IoMdImages } from 'react-icons/io'
-import { PiKeyReturnFill } from 'react-icons/pi'
+import { TbArrowBackUp } from 'react-icons/tb'
 import { FaGithub } from 'react-icons/fa'
 
 interface CardProps {
@@ -33,39 +29,36 @@ export function Card({ projectData }: CardProps) {
       $color={projectData.color}
       className={`rotating ${rotatedProjectId === projectData.id ? 'rotated' : ''}`}
     >
-      <div className="front">
+      <div
+        className="front"
+        onClick={() => handleClickToRotate(projectData.id)}
+      >
         <div>
           <div>
             <h2>{projectData.name}</h2>
-
             <div>
               <NavLink
                 target="_blank"
                 to={projectData.linkGitHub}
                 title={`Repositório GitHub: ${projectData.name}`}
+                onClick={(e) => e.stopPropagation()}
               >
                 <FaGithub />
               </NavLink>
-
-              <IoMdImages
-                onClick={() => handleClickToRotate(projectData.id)}
-                title="Imagem do projeto."
-              />
+              <TbArrowBackUp title="Imagem do projeto." />
             </div>
           </div>
-
-          <p>{projectData.description}</p>
+          <p title={projectData.description}>{projectData.description}</p>
         </div>
-
         <div>
           <NavLink
             target="_blank"
             to={projectData.link}
             title={projectData.link}
+            onClick={(e) => e.stopPropagation()}
           >
             Visualizar projeto
           </NavLink>
-
           <div>
             {projectData.technologies.map((technology) => (
               <span key={technology} title={technology}>
@@ -75,22 +68,17 @@ export function Card({ projectData }: CardProps) {
           </div>
         </div>
       </div>
-
       <div className="back" onClick={() => handleClickToRotate(projectData.id)}>
         <div>
           <h2>{projectData.name}</h2>
-
           <span title="Descrição do projeto.">
-            <PiKeyReturnFill />
+            <TbArrowBackUp />
           </span>
         </div>
-
-        <NavLink target="_blank" to={projectData.link}>
-          <div
-            className="container-background"
-            title={`Acesse: ${projectData.link}`}
-          ></div>
-        </NavLink>
+        <div
+          className="container-background"
+          title={`Acesse: ${projectData.link}`}
+        ></div>
       </div>
     </CardContainer>
   )
