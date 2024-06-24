@@ -15,8 +15,7 @@ import { Link as LinkUrl } from 'react-router-dom'
 import arrowLeft from '../../assets/icons/arrowLeft.svg'
 import arrowRight from '../../assets/icons/arrowRight.svg'
 import bar from '../../assets/icons/bar.svg'
-import { IoMenu, IoClose } from 'react-icons/io5'
-import { HiOutlineShare } from 'react-icons/hi'
+import { IoMenu, IoClose, IoShareSocialSharp } from 'react-icons/io5'
 
 const menuOptions = [
   {
@@ -83,7 +82,7 @@ export function Header() {
           target="_blank"
           title="Clique aqui para compartilhar"
         >
-          <HiOutlineShare />
+          <IoShareSocialSharp />
         </LinkUrl>
       </ContainerBrand>
 
