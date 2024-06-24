@@ -191,37 +191,51 @@ export const CardContainer = styled.div<CardContainerProps>`
     > div {
       width: 100%;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      gap: 1rem;
 
-      > h2 {
-        font-size: clamp(1.9rem, 2vw, 2.4rem);
+      > p:first-child {
+        font-size: 1.2rem;
         font-weight: 500;
-        line-height: 160%;
-        user-select: none;
-        color: ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
-
-        @media (max-width: 768px) {
-          font-size: 2.4rem;
-        }
-
-        @media (max-width: 380px) {
-          font-size: clamp(1.8rem, 4.5vw, 2.2rem);
-        }
+        color: ${(props) => props.theme.textInSmallCase};
+        margin-bottom: -0.8rem;
       }
 
-      > span {
-        > svg {
-          display: flex;
-          transform: scaleX(-1);
-          font-size: 2.5rem;
-          color: ${(props) => props.theme.textInSmallCase};
+      > div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > h2 {
+          font-size: clamp(1.9rem, 2vw, 2.4rem);
+          font-weight: 500;
+          line-height: 160%;
+          user-select: none;
+          color: ${({ theme, $color }) => theme[BASE_COLORS[$color]]};
+
+          @media (max-width: 768px) {
+            font-size: 2.4rem;
+          }
+
+          @media (max-width: 380px) {
+            font-size: clamp(1.8rem, 4.5vw, 2.2rem);
+          }
         }
 
-        transition: filter 0.3s ease-in-out;
+        > span {
+          > svg {
+            display: flex;
+            transform: scaleX(-1);
+            font-size: 2.5rem;
+            color: ${(props) => props.theme.textInSmallCase};
+          }
 
-        &:hover {
-          filter: brightness(150%);
+          transition: filter 0.3s ease-in-out;
+
+          &:hover {
+            filter: brightness(150%);
+          }
         }
       }
     }

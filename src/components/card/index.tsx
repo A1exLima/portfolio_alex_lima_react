@@ -69,13 +69,18 @@ export function Card({ projectData }: CardProps) {
           </div>
         </div>
       </div>
+
       <div className="back" onClick={() => handleClickToRotate(projectData.id)}>
         <div>
-          <h2>{projectData.name}</h2>
-          <span title="Descrição do projeto.">
-            <TbArrowBackUp />
-          </span>
+          <p>{projectData.date}</p>
+          <div>
+            <h2>{projectData.name}</h2>
+            <span title="Descrição do projeto.">
+              <TbArrowBackUp />
+            </span>
+          </div>
         </div>
+
         <div
           className="container-background"
           title={`Acesse: ${projectData.link}`}
