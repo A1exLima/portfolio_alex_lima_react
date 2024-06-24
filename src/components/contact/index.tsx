@@ -187,7 +187,11 @@ export function Contact() {
       </div>
 
       <div>
-        <NavLink to="/curriculoAlexLimaFrontEndDeveloper.pdf" target="_blank">
+        <NavLink
+          to="/curriculoAlexLimaFrontEndDeveloper.pdf"
+          target="_blank"
+          download
+        >
           <CustomTooltip title="Download Currículo" arrow>
             <ContactButton>
               <FaDownload />
@@ -195,7 +199,7 @@ export function Contact() {
           </CustomTooltip>
         </NavLink>
 
-        <NavLink to="/businessCard.png" target="_blank">
+        <NavLink to="/businessCard.png" target="_blank" download>
           <CustomTooltip title="Download Cartão de Visita" arrow>
             <ContactButton>
               <BsQrCode />
