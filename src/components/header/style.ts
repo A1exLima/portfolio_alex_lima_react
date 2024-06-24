@@ -21,6 +21,28 @@ export const HeaderContainer = styled.header`
     padding: 3rem 1rem 3rem 1rem;
   }
 `
+
+export const ContainerBrand = styled.div`
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+
+  > a {
+    cursor: pointer;
+    > svg {
+      display: flex;
+      font-size: 2.2rem;
+      color: ${(props) => props.theme.textInSmallCase};
+
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: ${(props) => props.theme.textInUpperCase};
+      }
+    }
+  }
+`
+
 export const Brand = styled(Link)`
   border-bottom: 1px solid none;
   width: fit-content;
@@ -47,7 +69,7 @@ export const Menu = styled.nav`
     list-style-type: none;
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 3.5rem;
 
     > a {
       cursor: pointer;

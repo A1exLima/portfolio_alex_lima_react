@@ -1,12 +1,22 @@
-import { Brand, HeaderContainer, Menu, MenuSideBar, SideBar } from './style'
+import {
+  Brand,
+  ContainerBrand,
+  HeaderContainer,
+  Menu,
+  MenuSideBar,
+  SideBar,
+} from './style'
 
 import { useState } from 'react'
 import { Link } from 'react-scroll'
+
+import { Link as LinkUrl } from 'react-router-dom'
 
 import arrowLeft from '../../assets/icons/arrowLeft.svg'
 import arrowRight from '../../assets/icons/arrowRight.svg'
 import bar from '../../assets/icons/bar.svg'
 import { IoMenu, IoClose } from 'react-icons/io5'
+import { HiOutlineShare } from 'react-icons/hi'
 
 const menuOptions = [
   {
@@ -51,21 +61,31 @@ export function Header() {
 
   return (
     <HeaderContainer>
-      <Brand
-        activeClass="active"
-        to="home"
-        spy={true}
-        smooth={true}
-        offset={-135}
-        duration={1000}
-        onClick={waitAndCloseMenu}
-      >
-        <span>ALEX</span>
-        <img src={arrowLeft} alt="" />
-        <span>CODE</span>
-        <img src={bar} alt="" />
-        <img src={arrowRight} alt="" />
-      </Brand>
+      <ContainerBrand>
+        <Brand
+          activeClass="active"
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-135}
+          duration={1000}
+          onClick={waitAndCloseMenu}
+        >
+          <span>ALEX</span>
+          <img src={arrowLeft} alt="" />
+          <span>CODE</span>
+          <img src={bar} alt="" />
+          <img src={arrowRight} alt="" />
+        </Brand>
+
+        <LinkUrl
+          to="https://wa.me/?text=https://alexcode.com.br/"
+          target="_blank"
+          title="Clique aqui para compartilhar"
+        >
+          <HiOutlineShare />
+        </LinkUrl>
+      </ContainerBrand>
 
       <Menu>
         <ul>
