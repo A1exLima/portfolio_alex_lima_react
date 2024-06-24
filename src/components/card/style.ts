@@ -186,7 +186,7 @@ export const CardContainer = styled.div<CardContainerProps>`
     align-items: start;
     gap: 2rem;
     background-color: ${(props) => props.theme['child-container']};
-    padding: 2.5rem;
+    padding: 2.9rem 2.5rem 2.5rem 2.5rem;
 
     > div {
       width: 100%;
