@@ -22,6 +22,7 @@ import { MdEmail } from 'react-icons/md'
 import { CiLinkedin } from 'react-icons/ci'
 import { FaPhone, FaArrowsRotate } from 'react-icons/fa6'
 import { PiYoutubeLogoLight } from 'react-icons/pi'
+import { BsQrCode } from 'react-icons/bs'
 
 import { defaultTheme } from '../../styles/themes/defaultTheme'
 
@@ -190,6 +191,14 @@ export function Contact() {
           <CustomTooltip title="Download Currículo" arrow>
             <ContactButton>
               <FaDownload />
+            </ContactButton>
+          </CustomTooltip>
+        </NavLink>
+
+        <NavLink to="/businessCard.png" target="_blank">
+          <CustomTooltip title="Download Cartão de Visita" arrow>
+            <ContactButton>
+              <BsQrCode />
             </ContactButton>
           </CustomTooltip>
         </NavLink>

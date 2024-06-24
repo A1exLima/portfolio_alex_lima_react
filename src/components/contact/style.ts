@@ -42,7 +42,7 @@ export const ContactContainer = styled.section`
   }
 
   > div:nth-child(3) {
-    max-width: 60rem;
+    max-width: 68.4rem;
     margin-top: -2rem;
 
     > p {
@@ -59,6 +59,7 @@ export const ContactContainer = styled.section`
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
+    justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
 
