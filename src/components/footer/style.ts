@@ -2,12 +2,13 @@ import styled from 'styled-components'
 
 export const FooterContainer = styled.footer`
   height: auto;
-  padding: 4rem 0;
+  padding: 0 0 3rem 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
+  white-space: nowrap;
 
   > div {
     display: flex;
@@ -37,43 +38,47 @@ export const FooterContainer = styled.footer`
   > span {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
 
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 125%;
 
-    > svg {
-      margin-top: 0.35rem;
-      font-size: 3.2rem;
-      color: ${(props) => props.theme['blue-object']};
+    > img {
+      width: 13rem;
+      margin-bottom: 0.75rem;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 620px) {
+    flex-direction: column;
     gap: 0.5rem;
-    padding: 0 0 4rem 0;
-  }
 
-  @media (max-width: 600px) {
+    > div {
+      > span {
+        display: none;
+      }
+
+      > p {
+      }
+    }
+
     > span {
-      display: none;
-    }
-
-    > div {
-      width: 100%;
-      justify-content: center;
+      > img {
+        margin-bottom: 0;
+      }
     }
   }
 
-  @media (max-width: 485px) {
+  @media (max-width: 380px) {
     > div {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
+      > span {
+        display: none;
+      }
 
-      > p:last-child {
-        margin-left: 0.5rem;
+      > p {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
       }
     }
   }
