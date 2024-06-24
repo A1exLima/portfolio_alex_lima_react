@@ -8,7 +8,7 @@ import {
 } from './style'
 
 import { useState, useEffect } from 'react'
-
+import { Element } from 'react-scroll'
 import { technologyIcons } from '../../registrationProjectsAndTechnologies/technologyIcons'
 import {
   projectRegistration,
@@ -32,8 +32,9 @@ export function PortfolioContent() {
     projectRegistrationProps[]
   >([])
   const [buttonsClicked, setButtonsClicked] = useState<string[]>([])
-
   const [filterVisible, setFilterVisible] = useState<boolean>(false)
+  const [showAnimation, setShowAnimation] = useState(false)
+  const [hasAnimated, setHasAnimated] = useState(false)
 
   useEffect(() => {
     setTechnologyFilterOptions(Object.keys(technologyIcons))
@@ -76,11 +77,47 @@ export function PortfolioContent() {
     }
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (hasAnimated) return
+
+      const element = document.getElementById('project')
+      if (element) {
+        const elementPosition = element.getBoundingClientRect().top
+        const screenHeight = window.innerHeight
+        const triggerPosition = screenHeight * 0.95
+
+        if (elementPosition < triggerPosition) {
+          setShowAnimation(true)
+          setHasAnimated(true)
+
+          setTimeout(() => {
+            setShowAnimation(false)
+          }, 3000)
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [hasAnimated])
+
   return (
     <PortfolioContainer>
-      <h2>
-        Projetos <span>.</span>
-      </h2>
+      <div>
+        <h2 id="project">
+          Projetos <span>.</span>
+        </h2>
+
+        <Element name="card-click">
+          <p
+            className={`alert-card ${showAnimation ? 'animate' : ''}`}
+            id="card-click"
+          >
+            Clique no card!
+          </p>
+        </Element>
+      </div>
 
       <FilterContainer>
         <FilterButton

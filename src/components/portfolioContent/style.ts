@@ -5,6 +5,7 @@ interface FiltersProps {
 }
 
 export const PortfolioContainer = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -14,21 +15,67 @@ export const PortfolioContainer = styled.section`
   padding: 4rem;
   background-color: ${(props) => props.theme['container-theme']};
 
-  > h2 {
-    margin-left: 2rem;
-    font-size: 3.5rem;
-    font-weight: 500;
-    user-select: none;
-    color: ${(props) => props.theme.textInUpperCase};
-    letter-spacing: 0.1rem;
-    text-align: center;
+  > div {
+    > h2 {
+      margin-left: 2rem;
+      font-size: 3.5rem;
+      font-weight: 500;
+      user-select: none;
+      color: ${(props) => props.theme.textInUpperCase};
+      letter-spacing: 0.1rem;
+      text-align: center;
 
-    @media (max-width: 525px) {
-      margin-bottom: 1.5rem;
+      @media (max-width: 525px) {
+        margin-bottom: 1.5rem;
+      }
+
+      > span {
+        color: ${(props) => props.theme['blue-text']};
+      }
     }
 
-    > span {
-      color: ${(props) => props.theme['blue-text']};
+    .alert-card {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      opacity: 0;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: ${(props) => props.theme['alert-message']};
+
+      @media (max-width: 380px) {
+        top: 1rem;
+        left: 1rem;
+      }
+    }
+
+    .animate {
+      opacity: 1;
+      animation: appear-blink-disappear 3s ease-in-out;
+    }
+
+    @keyframes appear-blink-disappear {
+      0% {
+        opacity: 0;
+      }
+      16.66% {
+        opacity: 1;
+      }
+      33.33% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      66.66% {
+        opacity: 0;
+      }
+      83.33% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
     }
   }
 `
