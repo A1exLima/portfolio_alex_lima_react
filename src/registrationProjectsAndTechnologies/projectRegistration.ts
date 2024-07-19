@@ -372,6 +372,6 @@ export const projectRegistration: projectRegistrationProps[] = [
   link: 'https://organoteam.netlify.app/',
   linkGitHub: 'https://github.com/A1exLima/organo-team',
   technologies: ['html', 'css', 'javaScript', 'react', 'styledComponents'],
-  color: 'green3',
+  color: 'red',
 },
 ]
