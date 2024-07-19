@@ -2,7 +2,7 @@
   💻<br>Portfólio - Alex Lima
 </h1>
 
-![Resultado final do projeto](assets/image/portfolio.jpg)
+![Resultado final do projeto](src/assets/images/portfolio.jpg)
 
 <h4 align="center"><a href="https://www.alexcode.com.br">Clique para visitar o projeto</a></h4>
 
