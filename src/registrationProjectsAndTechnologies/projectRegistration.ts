@@ -1,4 +1,4 @@
-const BASE_COLORS = {
+export const BASE_COLORS = {
   blue: 'project-blue',
   green3: 'project-green3',
   orange: 'project-orange',
