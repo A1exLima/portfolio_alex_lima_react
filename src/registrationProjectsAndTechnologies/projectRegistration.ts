@@ -1,4 +1,4 @@
-export const BASE_COLORS = {
+const BASE_COLORS = {
   blue: 'project-blue',
   green3: 'project-green3',
   orange: 'project-orange',
@@ -368,7 +368,7 @@ export const projectRegistration: projectRegistrationProps[] = [
   name: 'Organo',
   image: 'organo.jpg',
   description:
-    'O projeto "organo" é uma aplicação para cadastrar colaboradores e organizá-los por times, utilizando formulários eficientes com React Hook Form e validação com @hookform/resolvers e Zod. A interface dinâmica é aprimorada pelo uso do Swiper para exibir colaboradores de forma interativa. Dados são armazenados no localStorage, garantindo persistência e uma experiência fluida ao usuário.',
+    'Aplicação para cadastrar colaboradores e organizá-los por times, utilizando formulários eficientes com React Hook Form e validação com @hookform/resolvers e Zod. A interface dinâmica é aprimorada pelo uso do Swiper para exibir colaboradores de forma interativa. Dados são armazenados no localStorage, garantindo persistência e uma experiência fluida ao usuário.',
   link: 'https://organoteam.netlify.app/',
   linkGitHub: 'https://github.com/A1exLima/organo-team',
   technologies: ['html', 'css', 'javaScript', 'react', 'styledComponents'],
