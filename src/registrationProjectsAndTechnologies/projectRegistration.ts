@@ -374,4 +374,23 @@ export const projectRegistration: projectRegistrationProps[] = [
     technologies: ['html', 'css', 'javaScript', 'react', 'styledComponents'],
     color: 'red',
   },
+  {
+    id: 28,
+    date: '26/07/2024',
+    name: 'Busca CEP',
+    image: 'buscaCep.png',
+    description:
+      'O projeto utiliza a biblioteca Axios para realizar requisições HTTP à API ViaCEP. Esta API fornece informações detalhadas com base no CEP informado, como endereço, bairro, cidade e estado.',
+    link: 'https://zipcodeentrance.netlify.app/',
+    linkGitHub: 'https://github.com/A1exLima/busca-cep',
+    technologies: [
+      'html',
+      'css',
+      'javaScript',
+      'react',
+      'styledComponents',
+      'axios',
+    ],
+    color: 'green',
+  },
 ]
