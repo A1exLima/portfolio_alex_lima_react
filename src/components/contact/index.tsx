@@ -188,7 +188,7 @@ export function Contact() {
 
       <div>
         <NavLink
-          to="/curriculoAlexLimaFrontEndDeveloper.pdf"
+          to="/alexDaSilvaLimaDesenvolvedorFrontEnd.pdf"
           target="_blank"
           download
         >
