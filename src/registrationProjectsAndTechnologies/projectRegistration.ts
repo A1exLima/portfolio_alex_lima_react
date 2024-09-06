@@ -36,83 +36,6 @@ export const projectRegistration: projectRegistrationProps[] = [
     color: 'green3',
   },
   {
-    id: 2,
-    date: '25/01/2023',
-    name: 'Flutuar Viagens',
-    image: 'pacoteViagens.jpg',
-    description:
-      'Projeto de uma landing page, onde foi recriado uma aplicação a partir de um layout pronto no figma.',
-    link: 'https://a1exlima.github.io/rocketseat-stage2-intro-html-css/',
-    linkGitHub: 'https://github.com/A1exLima/rocketseat-stage2-intro-html-css',
-    technologies: ['html', 'css'],
-    color: 'blue',
-  },
-  {
-    id: 3,
-    date: '26/01/2023',
-    name: 'Ambientes Únicos',
-    image: 'ambientesUnicos.jpg',
-    description:
-      'Desenvolvimento de uma landing page baseada fielmente em um layout pré-existente no Figma. Este projeto destaca habilidades de implementação de design estático e funcionalidades interativas, proporcionando uma representação visual precisa e eficaz.',
-    link: 'https://a1exlima.github.io/rocketseat-stage2-intro-html-css-desafio-correcao-bug/',
-    linkGitHub:
-      'https://github.com/A1exLima/rocketseat-stage2-intro-html-css-desafio-correcao-bug',
-    technologies: ['html', 'css'],
-    color: 'violet',
-  },
-  {
-    id: 4,
-    date: '26/01/2023',
-    name: 'Rocket.sect',
-    image: 'rocketSect.jpg',
-    description:
-      'Desenvolvimento de uma landing page fiel ao layout original do Figma. Este projeto demonstra habilidades de implementação de design estático e funcionalidades interativas.',
-    link: 'https://a1exlima.github.io/rocketseat-stage2-intro-html-css-desafio-avancado/',
-    linkGitHub:
-      'https://github.com/A1exLima/rocketseat-stage2-intro-html-css-desafio-avancado',
-    technologies: ['html', 'css'],
-    color: 'gray',
-  },
-  {
-    id: 5,
-    date: '27/01/2023',
-    name: 'Treine.me',
-    image: 'treineMe.jpg',
-    description:
-      'Esta landing page foi cuidadosamente recriada para proporcionar uma experiência visual envolvente e funcional, demonstrando habilidades de implementação de design e desenvolvimento web.',
-    link: 'https://a1exlima.github.io/rocketseat-stage2-intro-html-css-desafio-correcao-bug-2/',
-    linkGitHub:
-      'https://github.com/A1exLima/rocketseat-stage2-intro-html-css-desafio-correcao-bug-2',
-    technologies: ['html', 'css'],
-    color: 'green',
-  },
-  {
-    id: 6,
-    date: '31/01/2023',
-    name: 'Form. de Mentoria',
-    image: 'formMentoria.jpg',
-    description:
-      'Projetado para facilitar o cadastro e agendamento de mentoria. Este formulário integra design intuitivo com funcionalidade prática, proporcionando uma experiência simplificada e eficaz para os usuários.',
-    link: 'https://a1exlima.github.io/rocketseat-stage3-criando-formularios-intermedirio/',
-    linkGitHub:
-      'https://github.com/A1exLima/rocketseat-stage3-criando-formularios-intermedirio',
-    technologies: ['html', 'css'],
-    color: 'purple',
-  },
-  {
-    id: 7,
-    date: '01/02/2023',
-    name: 'Avaliação de Mentoria',
-    image: 'avalMentoria.jpg',
-    description:
-      'Projeto recriado a partir de um layout pré-existente no Figma, desenvolvido para facilitar a avaliação de uma mentoria. Este formulário combina design intuitivo com funcionalidade, proporcionando uma experiência de usuário aprimorada e eficiente.',
-    link: 'https://a1exlima.github.io/rocketseat-stage3-criando-formularios-avancado/',
-    linkGitHub:
-      'https://github.com/A1exLima/rocketseat-stage3-criando-formularios-avancado',
-    technologies: ['html', 'css'],
-    color: 'red',
-  },
-  {
     id: 8,
     date: '01/03/2023',
     name: 'Tutorial Display Grid',
@@ -124,45 +47,6 @@ export const projectRegistration: projectRegistrationProps[] = [
       'https://github.com/A1exLima/rocketseat-stage3-revisao-display-grid',
     technologies: ['html', 'css'],
     color: 'orange',
-  },
-  {
-    id: 9,
-    date: '06/04/2023',
-    name: 'SPA Universe',
-    image: 'spaUniverse.jpg',
-    description:
-      'Projeto recriado a partir de um layout no Figma, explorando conceitos avançados como Single Page Application (SPA), mapeamento de rotas dinâmicas, uso de promises para tratamento assíncrono de dados e orientação a objetos para estruturação e reutilização de código. Uma oportunidade de aprimorar habilidades em desenvolvimento front-end moderno.',
-    link: 'https://universesparocketseat.netlify.app/',
-    linkGitHub:
-      'https://github.com/A1exLima/rocketseat-stage6-desafio-spa-universe',
-    technologies: ['html', 'css', 'javaScript'],
-    color: 'green3',
-  },
-  {
-    id: 10,
-    date: '10/04/2023',
-    name: 'Discovery Portfólio',
-    image: 'discPortfolio.jpg',
-    description:
-      'Projeto recriado a partir de um layout pré-existente no Figma, com o objetivo de praticar conceitos de HTML e CSS. Inspirado em um modelo de portfólio, este projeto oferece uma oportunidade de desenvolver habilidades em design responsivo e implementação de layout.',
-    link: 'https://a1exlima.github.io/rocketseat-discovery-projeto-portfolio/',
-    linkGitHub:
-      'https://github.com/A1exLima/rocketseat-discovery-projeto-portfolio',
-    technologies: ['html', 'css'],
-    color: 'blue',
-  },
-  {
-    id: 11,
-    date: '15/02/2023',
-    name: 'Jogo da Adivinhação',
-    image: 'game.jpg',
-    description:
-      'Um projeto educativo para praticar habilidades de lógica de programação e programação em JavaScript, enquanto introduz os fundamentos de manipulação da DOM. O jogo inclui desafios adicionais como validações, mensagens de incentivo ao jogador e alertas, proporcionando uma experiência interativa e educativa. Divirta-se explorando e aprendendo.',
-    link: 'https://a1exlima.github.io/rocketseat-stage5-jogo-adivinhacao/',
-    linkGitHub:
-      'https://github.com/A1exLima/rocketseat-stage5-jogo-adivinhacao',
-    technologies: ['html', 'css', 'javaScript'],
-    color: 'violet',
   },
   {
     id: 12,
@@ -178,19 +62,6 @@ export const projectRegistration: projectRegistrationProps[] = [
     color: 'gray',
   },
   {
-    id: 13,
-    date: '07/03/2023',
-    name: 'Biscoito da Sorte',
-    image: 'game2.jpg',
-    description:
-      'Um divertido jogo onde o usuário abre um biscoito da sorte com um simples clique ou tecla Enter para revelar sua sorte do dia. Uma experiência interativa e descontraída para alegrar o dia dos usuários.',
-    link: 'https://a1exlima.github.io/rocketseat-stage5-desafio-biscoito-da-sorte/',
-    linkGitHub:
-      'https://github.com/A1exLima/rocketseat-stage5-desafio-biscoito-da-sorte',
-    technologies: ['html', 'css', 'javaScript'],
-    color: 'green',
-  },
-  {
     id: 14,
     date: '10/03/2023',
     name: 'Calculadora IMC',
@@ -201,19 +72,6 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub: 'https://github.com/A1exLima/rocketseat-stage5-exercicio-imc',
     technologies: ['html', 'css', 'javaScript'],
     color: 'purple',
-  },
-  {
-    id: 15,
-    date: '16/03/2023',
-    name: 'Focus Timer',
-    image: 'focusTimer.jpg',
-    description:
-      'Desenvolvido para aprimorar habilidades em programação imperativa e declarativa, métodos de manipulação da DOM, recursão de funções, padrão factory para organização do código, e manipulação avançada de áudio. Uma ferramenta versátil e educativa para explorar diversos conceitos essenciais de desenvolvimento web.',
-    link: 'https://a1exlima.github.io/rocketseat-stage5-exercicio-focus-timer/',
-    linkGitHub:
-      'https://github.com/A1exLima/rocketseat-stage5-exercicio-focus-timer',
-    technologies: ['html', 'css', 'javaScript'],
-    color: 'red',
   },
   {
     id: 16,
@@ -312,25 +170,6 @@ export const projectRegistration: projectRegistrationProps[] = [
     linkGitHub: 'https://github.com/A1exLima/food_explorer_front_end',
     technologies: ['html', 'javaScript', 'react', 'styledComponents', 'axios'],
     color: 'red',
-  },
-  {
-    id: 24,
-    date: '12/02/2024',
-    name: 'Social Network',
-    image: 'socialNetwork.jpg',
-    description:
-      'Projeto desenvolvido com o intuito de explorar os fundamentos e aspectos avançados do desenvolvimento web com React. Este projeto inicia com conceitos essenciais como componentes e propriedades, além do uso de useState para gerenciar estados locais. Também abrange ferramentas fundamentais como Webpack e Babel para compilação e empacotamento de código.',
-    link: 'https://gehhusocialnetwork.netlify.app/',
-    linkGitHub:
-      'https://github.com/A1exLima/social_network_react_study_type_script',
-    technologies: [
-      'html',
-      'javaScript',
-      'react',
-      'styledComponents',
-      'typeScript',
-    ],
-    color: 'orange',
   },
   {
     id: 25,
