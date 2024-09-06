@@ -232,4 +232,23 @@ export const projectRegistration: projectRegistrationProps[] = [
     ],
     color: 'green',
   },
+  {
+    id: 29,
+    date: '19/08/2024',
+    name: 'Consulta CNPJ',
+    image: 'consultaCnpj.png',
+    description:
+      'O projeto "Consulta CNPJ" foi criado para oferecer uma experiência intuitiva e dinâmica aos usuários, mantendo um design minimalista com cores suaves, ideal para ambientes de trabalho.',
+    link: 'https://cnpjquery.netlify.app/',
+    linkGitHub: 'https://github.com/A1exLima/cnpj-query',
+    technologies: [
+      'html',
+      'css',
+      'javaScript',
+      'react',
+      'styledComponents',
+      'axios',
+    ],
+    color: 'orange',
+  },
 ]
